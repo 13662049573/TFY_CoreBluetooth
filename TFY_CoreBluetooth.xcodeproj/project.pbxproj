@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5680B1B5233E3B1C0081C5FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5680B1B4233E3B1C0081C5FA /* AppDelegate.m */; };
+		5680B1B8233E3B1C0081C5FA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5680B1B7233E3B1C0081C5FA /* SceneDelegate.m */; };
+		5680B1BB233E3B1C0081C5FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5680B1BA233E3B1C0081C5FA /* ViewController.m */; };
+		5680B1BE233E3B1C0081C5FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5680B1BC233E3B1C0081C5FA /* Main.storyboard */; };
+		5680B1C0233E3B1E0081C5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5680B1BF233E3B1E0081C5FA /* Assets.xcassets */; };
+		5680B1C3233E3B1E0081C5FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5680B1C1233E3B1E0081C5FA /* LaunchScreen.storyboard */; };
+		5680B1C6233E3B1E0081C5FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5680B1C5233E3B1E0081C5FA /* main.m */; };
+		5680B1D0233E3B1E0081C5FA /* TFY_CoreBluetoothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5680B1CF233E3B1E0081C5FA /* TFY_CoreBluetoothTests.m */; };
+		5680B1DB233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5680B1DA233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5680B1CC233E3B1E0081C5FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5680B1A8233E3B1C0081C5FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5680B1AF233E3B1C0081C5FA;
+			remoteInfo = TFY_CoreBluetooth;
+		};
+		5680B1D7233E3B1E0081C5FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5680B1A8233E3B1C0081C5FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5680B1AF233E3B1C0081C5FA;
+			remoteInfo = TFY_CoreBluetooth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5680B1B0233E3B1C0081C5FA /* TFY_CoreBluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFY_CoreBluetooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5680B1B3233E3B1C0081C5FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5680B1B4233E3B1C0081C5FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5680B1B6233E3B1C0081C5FA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		5680B1B7233E3B1C0081C5FA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		5680B1B9233E3B1C0081C5FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5680B1BA233E3B1C0081C5FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5680B1BD233E3B1C0081C5FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5680B1BF233E3B1E0081C5FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5680B1C2233E3B1E0081C5FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5680B1C4233E3B1E0081C5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5680B1C5233E3B1E0081C5FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5680B1CB233E3B1E0081C5FA /* TFY_CoreBluetoothTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFY_CoreBluetoothTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5680B1CF233E3B1E0081C5FA /* TFY_CoreBluetoothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_CoreBluetoothTests.m; sourceTree = "<group>"; };
+		5680B1D1233E3B1E0081C5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5680B1D6233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFY_CoreBluetoothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5680B1DA233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_CoreBluetoothUITests.m; sourceTree = "<group>"; };
+		5680B1DC233E3B1E0081C5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5680B1AD233E3B1C0081C5FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5680B1C8233E3B1E0081C5FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5680B1D3233E3B1E0081C5FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5680B1A7233E3B1C0081C5FA = {
+			isa = PBXGroup;
+			children = (
+				5680B1B2233E3B1C0081C5FA /* TFY_CoreBluetooth */,
+				5680B1CE233E3B1E0081C5FA /* TFY_CoreBluetoothTests */,
+				5680B1D9233E3B1E0081C5FA /* TFY_CoreBluetoothUITests */,
+				5680B1B1233E3B1C0081C5FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5680B1B1233E3B1C0081C5FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5680B1B0233E3B1C0081C5FA /* TFY_CoreBluetooth.app */,
+				5680B1CB233E3B1E0081C5FA /* TFY_CoreBluetoothTests.xctest */,
+				5680B1D6233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5680B1B2233E3B1C0081C5FA /* TFY_CoreBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				5680B1B3233E3B1C0081C5FA /* AppDelegate.h */,
+				5680B1B4233E3B1C0081C5FA /* AppDelegate.m */,
+				5680B1B6233E3B1C0081C5FA /* SceneDelegate.h */,
+				5680B1B7233E3B1C0081C5FA /* SceneDelegate.m */,
+				5680B1B9233E3B1C0081C5FA /* ViewController.h */,
+				5680B1BA233E3B1C0081C5FA /* ViewController.m */,
+				5680B1BC233E3B1C0081C5FA /* Main.storyboard */,
+				5680B1BF233E3B1E0081C5FA /* Assets.xcassets */,
+				5680B1C1233E3B1E0081C5FA /* LaunchScreen.storyboard */,
+				5680B1C4233E3B1E0081C5FA /* Info.plist */,
+				5680B1C5233E3B1E0081C5FA /* main.m */,
+			);
+			path = TFY_CoreBluetooth;
+			sourceTree = "<group>";
+		};
+		5680B1CE233E3B1E0081C5FA /* TFY_CoreBluetoothTests */ = {
+			isa = PBXGroup;
+			children = (
+				5680B1CF233E3B1E0081C5FA /* TFY_CoreBluetoothTests.m */,
+				5680B1D1233E3B1E0081C5FA /* Info.plist */,
+			);
+			path = TFY_CoreBluetoothTests;
+			sourceTree = "<group>";
+		};
+		5680B1D9233E3B1E0081C5FA /* TFY_CoreBluetoothUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5680B1DA233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.m */,
+				5680B1DC233E3B1E0081C5FA /* Info.plist */,
+			);
+			path = TFY_CoreBluetoothUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5680B1AF233E3B1C0081C5FA /* TFY_CoreBluetooth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5680B1DF233E3B1E0081C5FA /* Build configuration list for PBXNativeTarget "TFY_CoreBluetooth" */;
+			buildPhases = (
+				5680B1AC233E3B1C0081C5FA /* Sources */,
+				5680B1AD233E3B1C0081C5FA /* Frameworks */,
+				5680B1AE233E3B1C0081C5FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TFY_CoreBluetooth;
+			productName = TFY_CoreBluetooth;
+			productReference = 5680B1B0233E3B1C0081C5FA /* TFY_CoreBluetooth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5680B1CA233E3B1E0081C5FA /* TFY_CoreBluetoothTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5680B1E2233E3B1E0081C5FA /* Build configuration list for PBXNativeTarget "TFY_CoreBluetoothTests" */;
+			buildPhases = (
+				5680B1C7233E3B1E0081C5FA /* Sources */,
+				5680B1C8233E3B1E0081C5FA /* Frameworks */,
+				5680B1C9233E3B1E0081C5FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5680B1CD233E3B1E0081C5FA /* PBXTargetDependency */,
+			);
+			name = TFY_CoreBluetoothTests;
+			productName = TFY_CoreBluetoothTests;
+			productReference = 5680B1CB233E3B1E0081C5FA /* TFY_CoreBluetoothTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5680B1D5233E3B1E0081C5FA /* TFY_CoreBluetoothUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5680B1E5233E3B1E0081C5FA /* Build configuration list for PBXNativeTarget "TFY_CoreBluetoothUITests" */;
+			buildPhases = (
+				5680B1D2233E3B1E0081C5FA /* Sources */,
+				5680B1D3233E3B1E0081C5FA /* Frameworks */,
+				5680B1D4233E3B1E0081C5FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5680B1D8233E3B1E0081C5FA /* PBXTargetDependency */,
+			);
+			name = TFY_CoreBluetoothUITests;
+			productName = TFY_CoreBluetoothUITests;
+			productReference = 5680B1D6233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5680B1A8233E3B1C0081C5FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "田风有";
+				TargetAttributes = {
+					5680B1AF233E3B1C0081C5FA = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					5680B1CA233E3B1E0081C5FA = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 5680B1AF233E3B1C0081C5FA;
+					};
+					5680B1D5233E3B1E0081C5FA = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 5680B1AF233E3B1C0081C5FA;
+					};
+				};
+			};
+			buildConfigurationList = 5680B1AB233E3B1C0081C5FA /* Build configuration list for PBXProject "TFY_CoreBluetooth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5680B1A7233E3B1C0081C5FA;
+			productRefGroup = 5680B1B1233E3B1C0081C5FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5680B1AF233E3B1C0081C5FA /* TFY_CoreBluetooth */,
+				5680B1CA233E3B1E0081C5FA /* TFY_CoreBluetoothTests */,
+				5680B1D5233E3B1E0081C5FA /* TFY_CoreBluetoothUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5680B1AE233E3B1C0081C5FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5680B1C3233E3B1E0081C5FA /* LaunchScreen.storyboard in Resources */,
+				5680B1C0233E3B1E0081C5FA /* Assets.xcassets in Resources */,
+				5680B1BE233E3B1C0081C5FA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5680B1C9233E3B1E0081C5FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5680B1D4233E3B1E0081C5FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5680B1AC233E3B1C0081C5FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5680B1BB233E3B1C0081C5FA /* ViewController.m in Sources */,
+				5680B1B5233E3B1C0081C5FA /* AppDelegate.m in Sources */,
+				5680B1C6233E3B1E0081C5FA /* main.m in Sources */,
+				5680B1B8233E3B1C0081C5FA /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5680B1C7233E3B1E0081C5FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5680B1D0233E3B1E0081C5FA /* TFY_CoreBluetoothTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5680B1D2233E3B1E0081C5FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5680B1DB233E3B1E0081C5FA /* TFY_CoreBluetoothUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5680B1CD233E3B1E0081C5FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5680B1AF233E3B1C0081C5FA /* TFY_CoreBluetooth */;
+			targetProxy = 5680B1CC233E3B1E0081C5FA /* PBXContainerItemProxy */;
+		};
+		5680B1D8233E3B1E0081C5FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5680B1AF233E3B1C0081C5FA /* TFY_CoreBluetooth */;
+			targetProxy = 5680B1D7233E3B1E0081C5FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5680B1BC233E3B1C0081C5FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5680B1BD233E3B1C0081C5FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5680B1C1233E3B1E0081C5FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5680B1C2233E3B1E0081C5FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5680B1DD233E3B1E0081C5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5680B1DE233E3B1E0081C5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5680B1E0233E3B1E0081C5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 246ETN6ZKR;
+				INFOPLIST_FILE = TFY_CoreBluetooth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tfy.TFY-CoreBluetooth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5680B1E1233E3B1E0081C5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 246ETN6ZKR;
+				INFOPLIST_FILE = TFY_CoreBluetooth/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tfy.TFY-CoreBluetooth";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5680B1E3233E3B1E0081C5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 246ETN6ZKR;
+				INFOPLIST_FILE = TFY_CoreBluetoothTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tfy.TFY-CoreBluetoothTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFY_CoreBluetooth.app/TFY_CoreBluetooth";
+			};
+			name = Debug;
+		};
+		5680B1E4233E3B1E0081C5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 246ETN6ZKR;
+				INFOPLIST_FILE = TFY_CoreBluetoothTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tfy.TFY-CoreBluetoothTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFY_CoreBluetooth.app/TFY_CoreBluetooth";
+			};
+			name = Release;
+		};
+		5680B1E6233E3B1E0081C5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 246ETN6ZKR;
+				INFOPLIST_FILE = TFY_CoreBluetoothUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tfy.TFY-CoreBluetoothUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TFY_CoreBluetooth;
+			};
+			name = Debug;
+		};
+		5680B1E7233E3B1E0081C5FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 246ETN6ZKR;
+				INFOPLIST_FILE = TFY_CoreBluetoothUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tfy.TFY-CoreBluetoothUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TFY_CoreBluetooth;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5680B1AB233E3B1C0081C5FA /* Build configuration list for PBXProject "TFY_CoreBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5680B1DD233E3B1E0081C5FA /* Debug */,
+				5680B1DE233E3B1E0081C5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5680B1DF233E3B1E0081C5FA /* Build configuration list for PBXNativeTarget "TFY_CoreBluetooth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5680B1E0233E3B1E0081C5FA /* Debug */,
+				5680B1E1233E3B1E0081C5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5680B1E2233E3B1E0081C5FA /* Build configuration list for PBXNativeTarget "TFY_CoreBluetoothTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5680B1E3233E3B1E0081C5FA /* Debug */,
+				5680B1E4233E3B1E0081C5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5680B1E5233E3B1E0081C5FA /* Build configuration list for PBXNativeTarget "TFY_CoreBluetoothUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5680B1E6233E3B1E0081C5FA /* Debug */,
+				5680B1E7233E3B1E0081C5FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5680B1A8233E3B1C0081C5FA /* Project object */;
+}
