@@ -23,15 +23,17 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'ManagerTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/ManagerTool/**/*.{h,m}"
+    ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/UtilsTool'
   end
 
   spec.subspec 'UtilsTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/UtilsTool/**/*.{h,m}"
+    ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/ManagerTool'
   end
 
   spec.frameworks    = "Foundation","UIKit","CoreBluetooth"
 
-  spec.xcconfig      = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include" }
+  # spec.xcconfig      = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include" }
 
   spec.requires_arc = true
   
