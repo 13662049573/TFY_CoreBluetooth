@@ -1,0 +1,11 @@
+platform :ios,'10.0'
+inhibit_all_warnings!
+target 'TFY_CoreBluetooth' do
+
+pod 'TFY_Category'
+pod 'TFY_ProgressHUD'
+pod 'TFY_Navigation'
+pod 'TFY_SimplifytableViewKit'
+pod 'TFY_AutoLayout'
+
+end
