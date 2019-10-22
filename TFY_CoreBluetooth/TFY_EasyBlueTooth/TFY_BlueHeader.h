@@ -11,5 +11,7 @@
 
 #import "TFY_EasyCenterManager.h"
 #import "TFY_EasyBlueToothManager.h"
+#import "TFY_EasyUtils.h"
+
 
 #endif /* TFY_BlueHeader_h */
