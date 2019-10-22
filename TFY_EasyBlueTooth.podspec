@@ -23,12 +23,12 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'ManagerTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/ManagerTool/**/*.{h,m}"
-    ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_EasyUtils'
+    ss.dependency 'TFY_EasyBlueTooth/TFY_EasyUtils'
   end
 
   spec.subspec 'UtilsTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/UtilsTool/**/*.{h,m}"
-    ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_EasyUtils'
+    ss.dependency 'TFY_EasyBlueTooth/TFY_EasyUtils'
   end
 
   spec.frameworks    = "Foundation","UIKit","CoreBluetooth"
