@@ -2,7 +2,9 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TFY_EasyBlueTooth"
-  spec.version      = "2.0.0"
+
+  spec.version      = "2.0.1"
+  
   spec.summary      = "蓝牙封装适合各种设备使用"
 
   spec.description  = "蓝牙封装适合各种设备使用"
