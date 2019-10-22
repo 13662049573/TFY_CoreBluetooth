@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/13662049573/TFY_CoreBluetooth.git", :tag => spec.version }
 
-  spec.source_files  = "TFY_EasyBlueTooth/TFY_BlueHeader.h"
+  spec.source_files  = "TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_BlueHeader.h"
 
   spec.subspec 'ManagerTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/ManagerTool/**/*.{h,m}"
