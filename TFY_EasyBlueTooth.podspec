@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
 
   spec.description  = "蓝牙封装适合各种设备使用"
 
-  spec.homepage     = "http://EXAMPLE/TFY_EasyBlueTooth"
+  spec.homepage     = "https://github.com/13662049573/TFY_CoreBluetooth"
   
   spec.license      = "MIT"
   
@@ -15,7 +15,7 @@ Pod::Spec.new do |spec|
   
   spec.platform     = :ios, "10.0"
 
-  spec.source       = { :git => "http://EXAMPLE/TFY_EasyBlueTooth.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/13662049573/TFY_CoreBluetooth.git", :tag => spec.version }
 
   spec.source_files  = "TFY_EasyBlueTooth/TFY_BlueHeader.h"
 
