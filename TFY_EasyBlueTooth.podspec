@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "TFY_EasyBlueTooth"
 
-  spec.version      = "2.0.1"
+  spec.version      = "2.0.2"
   
   spec.summary      = "蓝牙封装适合各种设备使用"
 
@@ -23,12 +23,12 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'ManagerTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/ManagerTool/**/*.{h,m}"
-    # ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/UtilsTool'
+    ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_EasyUtils'
   end
 
   spec.subspec 'UtilsTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/UtilsTool/**/*.{h,m}"
-    # ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/ManagerTool'
+    ss.dependency 'TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_EasyUtils'
   end
 
   spec.frameworks    = "Foundation","UIKit","CoreBluetooth"
