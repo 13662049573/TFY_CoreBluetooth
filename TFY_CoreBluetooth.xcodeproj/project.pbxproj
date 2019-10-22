@@ -17,10 +17,10 @@
 		565A15DB235E885600B36531 /* TFY_EasyService.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15D0235E885600B36531 /* TFY_EasyService.m */; };
 		565A15DC235E885600B36531 /* TFY_EasyPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15D1235E885600B36531 /* TFY_EasyPeripheral.m */; };
 		565A15DD235E885600B36531 /* TFY_EasyCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15D3235E885600B36531 /* TFY_EasyCharacteristic.m */; };
-		565A15DE235E885600B36531 /* TFY_EasyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15D5235E885600B36531 /* TFY_EasyUtils.m */; };
 		565A15DF235E8C5700B36531 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5657EA5A233F59C6009BF1F3 /* Foundation.framework */; };
 		565A15E0235E8C6000B36531 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5657EA5C233F59D0009BF1F3 /* UIKit.framework */; };
 		565A15E2235E8C6800B36531 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565A15E1235E8C6800B36531 /* CoreBluetooth.framework */; };
+		565A15E5235EABB700B36531 /* TFY_EasyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15E3235EABB700B36531 /* TFY_EasyUtils.m */; };
 		566EA7B62341CC1300AA66E5 /* GKCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 566EA7B22341CC1300AA66E5 /* GKCycleScrollView.m */; };
 		566EA7B72341CC1300AA66E5 /* GKCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566EA7B52341CC1300AA66E5 /* GKCycleScrollViewCell.m */; };
 		5680B1C0233E3B1E0081C5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5680B1BF233E3B1E0081C5FA /* Assets.xcassets */; };
@@ -73,15 +73,15 @@
 		565A15CC235E885600B36531 /* TFY_EasyDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyDescriptor.m; sourceTree = "<group>"; };
 		565A15CD235E885600B36531 /* TFY_EasyPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyPeripheral.h; sourceTree = "<group>"; };
 		565A15CE235E885600B36531 /* TFY_EasyCharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyCharacteristic.h; sourceTree = "<group>"; };
-		565A15CF235E885600B36531 /* TFY_EasyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyUtils.h; sourceTree = "<group>"; };
 		565A15D0235E885600B36531 /* TFY_EasyService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyService.m; sourceTree = "<group>"; };
 		565A15D1235E885600B36531 /* TFY_EasyPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyPeripheral.m; sourceTree = "<group>"; };
 		565A15D2235E885600B36531 /* TFY_EasyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyDescriptor.h; sourceTree = "<group>"; };
 		565A15D3235E885600B36531 /* TFY_EasyCharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyCharacteristic.m; sourceTree = "<group>"; };
 		565A15D4235E885600B36531 /* TFY_EasyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyService.h; sourceTree = "<group>"; };
-		565A15D5235E885600B36531 /* TFY_EasyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyUtils.m; sourceTree = "<group>"; };
 		565A15D6235E885600B36531 /* TFY_BlueHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_BlueHeader.h; sourceTree = "<group>"; };
 		565A15E1235E8C6800B36531 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		565A15E3235EABB700B36531 /* TFY_EasyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyUtils.m; sourceTree = "<group>"; };
+		565A15E4235EABB700B36531 /* TFY_EasyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyUtils.h; sourceTree = "<group>"; };
 		566EA7B22341CC1300AA66E5 /* GKCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollView.m; sourceTree = "<group>"; };
 		566EA7B32341CC1300AA66E5 /* GKCycleScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollViewCell.h; sourceTree = "<group>"; };
 		566EA7B42341CC1300AA66E5 /* GKCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollView.h; sourceTree = "<group>"; };
@@ -163,6 +163,8 @@
 		565A15C3235E885600B36531 /* TFY_EasyBlueTooth */ = {
 			isa = PBXGroup;
 			children = (
+				565A15E4235EABB700B36531 /* TFY_EasyUtils.h */,
+				565A15E3235EABB700B36531 /* TFY_EasyUtils.m */,
 				565A15D6235E885600B36531 /* TFY_BlueHeader.h */,
 				565A15C4235E885600B36531 /* ManagerTool */,
 				565A15CB235E885600B36531 /* UtilsTool */,
@@ -186,8 +188,6 @@
 		565A15CB235E885600B36531 /* UtilsTool */ = {
 			isa = PBXGroup;
 			children = (
-				565A15CF235E885600B36531 /* TFY_EasyUtils.h */,
-				565A15D5235E885600B36531 /* TFY_EasyUtils.m */,
 				565A15D4235E885600B36531 /* TFY_EasyService.h */,
 				565A15D0235E885600B36531 /* TFY_EasyService.m */,
 				565A15CD235E885600B36531 /* TFY_EasyPeripheral.h */,
@@ -516,7 +516,7 @@
 				5680B1FA233E3BF50081C5FA /* ViewController.m in Sources */,
 				566EA7B72341CC1300AA66E5 /* GKCycleScrollViewCell.m in Sources */,
 				565A15DB235E885600B36531 /* TFY_EasyService.m in Sources */,
-				565A15DE235E885600B36531 /* TFY_EasyUtils.m in Sources */,
+				565A15E5235EABB700B36531 /* TFY_EasyUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
