@@ -163,9 +163,9 @@
 		565A15C3235E885600B36531 /* TFY_EasyBlueTooth */ = {
 			isa = PBXGroup;
 			children = (
+				565A15D6235E885600B36531 /* TFY_BlueHeader.h */,
 				565A15E4235EABB700B36531 /* TFY_EasyUtils.h */,
 				565A15E3235EABB700B36531 /* TFY_EasyUtils.m */,
-				565A15D6235E885600B36531 /* TFY_BlueHeader.h */,
 				565A15C4235E885600B36531 /* ManagerTool */,
 				565A15CB235E885600B36531 /* UtilsTool */,
 			);
