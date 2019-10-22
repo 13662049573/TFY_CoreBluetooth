@@ -69,8 +69,23 @@ typedef union
 /**
  * 将16进制的字符串转换成NSData
  */
-+ (NSMutableData *)convertHexStrToData:(NSString *)str ;
++ (NSData *)convertHexStrToData:(NSString *)str ;
+/**
+ *  将NSData转为16进制的字符串
+ */
++ (NSString *)convertDataToHexStr:(NSData *)data;
+/**
+ *  十进制准换为十六进制字符串
+ */
++ (NSString *)hexStringFromString:(NSString *)string;
 
++(NSString *)parseByteArray2HexString:(Byte[_Nonnull])bytes;
+
++(NSString *)stringFromHexString:(NSString *)hexString;
+/**
+ * 10进制转16进制
+ */
++(NSString *)ToHex:(long long int)tmpid;
 /**
  *十六进制转换为普通字符串的。
  */

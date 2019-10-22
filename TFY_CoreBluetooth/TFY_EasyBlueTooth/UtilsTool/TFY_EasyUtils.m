@@ -102,7 +102,7 @@ static const double reserved_float_values[5] = {INFINITY, NAN, NAN, NAN, -INFINI
     return hexStr;
 }
 
-+(NSString *)parseByteArray2HexString:(Byte[]) bytes
++(NSString *)parseByteArray2HexString:(Byte[])bytes
 {
     NSMutableString *hexStr = [[NSMutableString alloc]init];
     int i = 0;
@@ -212,7 +212,7 @@ static const double reserved_float_values[5] = {INFINITY, NAN, NAN, NAN, -INFINI
 
 
 //int转data
-+ (NSData *)ConvertIntToData:(int)i {
++ (NSData *)ConvertIntToData:(int)i{
     
     NSData *data = [NSData dataWithBytes: &i length: sizeof(i)];
     return data;
