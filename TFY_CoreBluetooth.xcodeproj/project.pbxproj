@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3623FC2123419E5700A96C3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3623FC2023419E5700A96C3A /* LaunchScreen.storyboard */; };
 		3623FC272341A3B700A96C3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3623FC262341A3B700A96C3A /* Main.storyboard */; };
+		369201BC235F22EF001E4D6B /* TFY_EasyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 369201BA235F22EE001E4D6B /* TFY_EasyUtils.m */; };
 		5657EA35233EE212009BF1F3 /* TFY_BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5657EA34233EE212009BF1F3 /* TFY_BLEManager.m */; };
 		565A15D7235E885600B36531 /* TFY_EasyBlueToothManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15C6235E885600B36531 /* TFY_EasyBlueToothManager.m */; };
 		565A15D8235E885600B36531 /* TFY_EasyCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15C7235E885600B36531 /* TFY_EasyCenterManager.m */; };
@@ -19,8 +20,6 @@
 		565A15DD235E885600B36531 /* TFY_EasyCharacteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15D3235E885600B36531 /* TFY_EasyCharacteristic.m */; };
 		565A15DF235E8C5700B36531 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5657EA5A233F59C6009BF1F3 /* Foundation.framework */; };
 		565A15E0235E8C6000B36531 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5657EA5C233F59D0009BF1F3 /* UIKit.framework */; };
-		565A15E2235E8C6800B36531 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565A15E1235E8C6800B36531 /* CoreBluetooth.framework */; };
-		565A15E5235EABB700B36531 /* TFY_EasyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 565A15E3235EABB700B36531 /* TFY_EasyUtils.m */; };
 		566EA7B62341CC1300AA66E5 /* GKCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 566EA7B22341CC1300AA66E5 /* GKCycleScrollView.m */; };
 		566EA7B72341CC1300AA66E5 /* GKCycleScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 566EA7B52341CC1300AA66E5 /* GKCycleScrollViewCell.m */; };
 		5680B1C0233E3B1E0081C5FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5680B1BF233E3B1E0081C5FA /* Assets.xcassets */; };
@@ -57,6 +56,8 @@
 		221A43D2EE06B8964A3649EB /* Pods-TFY_CoreBluetooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TFY_CoreBluetooth.release.xcconfig"; path = "Target Support Files/Pods-TFY_CoreBluetooth/Pods-TFY_CoreBluetooth.release.xcconfig"; sourceTree = "<group>"; };
 		3623FC2023419E5700A96C3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3623FC262341A3B700A96C3A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		369201BA235F22EE001E4D6B /* TFY_EasyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyUtils.m; sourceTree = "<group>"; };
+		369201BB235F22EE001E4D6B /* TFY_EasyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyUtils.h; sourceTree = "<group>"; };
 		5657EA33233EE212009BF1F3 /* TFY_BLEManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_BLEManager.h; sourceTree = "<group>"; };
 		5657EA34233EE212009BF1F3 /* TFY_BLEManager.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; path = TFY_BLEManager.m; sourceTree = "<group>"; };
 		5657EA3A233EE276009BF1F3 /* TFY_BLEConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_BLEConst.h; sourceTree = "<group>"; };
@@ -80,8 +81,6 @@
 		565A15D4235E885600B36531 /* TFY_EasyService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyService.h; sourceTree = "<group>"; };
 		565A15D6235E885600B36531 /* TFY_BlueHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_BlueHeader.h; sourceTree = "<group>"; };
 		565A15E1235E8C6800B36531 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		565A15E3235EABB700B36531 /* TFY_EasyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyUtils.m; sourceTree = "<group>"; };
-		565A15E4235EABB700B36531 /* TFY_EasyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyUtils.h; sourceTree = "<group>"; };
 		566EA7B22341CC1300AA66E5 /* GKCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCycleScrollView.m; sourceTree = "<group>"; };
 		566EA7B32341CC1300AA66E5 /* GKCycleScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollViewCell.h; sourceTree = "<group>"; };
 		566EA7B42341CC1300AA66E5 /* GKCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCycleScrollView.h; sourceTree = "<group>"; };
@@ -116,7 +115,6 @@
 			files = (
 				D06875F8099682505D626B8D /* libPods-TFY_CoreBluetooth.a in Frameworks */,
 				565A15E0235E8C6000B36531 /* UIKit.framework in Frameworks */,
-				565A15E2235E8C6800B36531 /* CoreBluetooth.framework in Frameworks */,
 				565A15DF235E8C5700B36531 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,8 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				565A15D6235E885600B36531 /* TFY_BlueHeader.h */,
-				565A15E4235EABB700B36531 /* TFY_EasyUtils.h */,
-				565A15E3235EABB700B36531 /* TFY_EasyUtils.m */,
+
 				565A15C4235E885600B36531 /* ManagerTool */,
 				565A15CB235E885600B36531 /* UtilsTool */,
 			);
@@ -188,6 +185,8 @@
 		565A15CB235E885600B36531 /* UtilsTool */ = {
 			isa = PBXGroup;
 			children = (
+				369201BB235F22EE001E4D6B /* TFY_EasyUtils.h */,
+				369201BA235F22EE001E4D6B /* TFY_EasyUtils.m */,
 				565A15D4235E885600B36531 /* TFY_EasyService.h */,
 				565A15D0235E885600B36531 /* TFY_EasyService.m */,
 				565A15CD235E885600B36531 /* TFY_EasyPeripheral.h */,
@@ -513,10 +512,10 @@
 				566EA7B62341CC1300AA66E5 /* GKCycleScrollView.m in Sources */,
 				565A15DA235E885600B36531 /* TFY_EasyDescriptor.m in Sources */,
 				565A15DC235E885600B36531 /* TFY_EasyPeripheral.m in Sources */,
+				369201BC235F22EF001E4D6B /* TFY_EasyUtils.m in Sources */,
 				5680B1FA233E3BF50081C5FA /* ViewController.m in Sources */,
 				566EA7B72341CC1300AA66E5 /* GKCycleScrollViewCell.m in Sources */,
 				565A15DB235E885600B36531 /* TFY_EasyService.m in Sources */,
-				565A15E5235EABB700B36531 /* TFY_EasyUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,7 +1,7 @@
 PODS:
   - TFY_AutoLayout (2.4.7)
-  - TFY_Category (2.6.2)
-  - TFY_Navigation (2.1.0)
+  - TFY_Category (2.6.7)
+  - TFY_Navigation (2.1.2)
   - TFY_ProgressHUD (2.2.0)
   - TFY_SimplifytableViewKit (2.1.4)
 
@@ -22,11 +22,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   TFY_AutoLayout: 3856cd8766f67cd8aeca980281d630e28cdbfd12
-  TFY_Category: 52e228e7b187598fe74e5c3bc4a839cb630f7766
-  TFY_Navigation: 7e6c6eeb8f318233bf88fab31181e5408e4c04fb
+  TFY_Category: f13b435b033d3ed8bf3b645ec703daa9d011014f
+  TFY_Navigation: ba7d9ab33214a06ec440c21e8ea623cd086179ac
   TFY_ProgressHUD: 543348e5fc1a835fb1d0450a0f0b6ac97dcbd788
   TFY_SimplifytableViewKit: 6cb8041d11077228028f5440b6e79aa4714e1a53
 
 PODFILE CHECKSUM: aa83f842e2750afd6d7a70a104b2b3e4a82134b5
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.8.4
