@@ -16,7 +16,6 @@
 @class TFY_EasyDescriptor ;
 @class TFY_EasyCenterManager ;
 
-
 typedef NS_ENUM(NSUInteger ,searchFlagType) {
     searchFlagTypeDefaut = 1 << 0,
     searchFlagTypeFinish = 1 << 1,//扫描时间到
