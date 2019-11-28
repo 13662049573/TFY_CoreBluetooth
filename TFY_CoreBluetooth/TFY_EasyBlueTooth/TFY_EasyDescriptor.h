@@ -11,6 +11,7 @@
 #import "TFY_EasyCharacteristic.h"
 
 @class TFY_EasyDescriptor ;
+@class TFY_EasyCharacteristic;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -66,7 +67,7 @@ typedef void (^blueToothDescriptorOperateCallback)(TFY_EasyDescriptor *descripto
 /**
  * 处理 easyPeripheral操作完的回到
  */
-- (void)dealOperationDescriptorWithType:(OperationType)type error:(NSError *)error ;
+- (void)dealOperationDescriptorWithType:(OperationType)type error:(NSError *)error;
 
 
 @end
