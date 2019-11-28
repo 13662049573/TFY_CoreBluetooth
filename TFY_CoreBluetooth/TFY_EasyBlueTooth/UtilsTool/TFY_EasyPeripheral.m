@@ -7,10 +7,7 @@
 //
 
 #import "TFY_EasyPeripheral.h"
-#import "TFY_EasyCenterManager.h"
-#import "TFY_EasyService.h"
-#import "TFY_EasyCharacteristic.h"
-#import "TFY_EasyDescriptor.h"
+
 
 @interface TFY_EasyPeripheral ()<CBPeripheralDelegate>
 {

@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "TFY_EasyCenterManager.h"
+#import "TFY_EasyService.h"
+#import "TFY_EasyCharacteristic.h"
+#import "TFY_EasyDescriptor.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class TFY_EasyService ;
