@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
 
   spec.subspec 'UtilsTool' do |ss|
     ss.source_files = "TFY_CoreBluetooth/TFY_EasyBlueTooth/UtilsTool/**/*.{h,m}"
-    ss.dependency "TFY_EasyBlueTooth/ManagerTool"
+    # ss.dependency "TFY_EasyBlueTooth/ManagerTool"
   end
 
   spec.subspec 'ManagerTool' do |ss|
