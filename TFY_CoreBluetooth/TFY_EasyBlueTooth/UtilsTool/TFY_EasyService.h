@@ -8,8 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "TFY_EasyUtils.h"
+#import "TFY_EasyPeripheral.h"
+#import "TFY_EasyCharacteristic.h"
+#import "TFY_EasyDescriptor.h"
 
-@class TFY_EasyService ;
 @class TFY_EasyPeripheral ;
 @class TFY_EasyCharacteristic ;
 @class TFY_EasyDescriptor ;
