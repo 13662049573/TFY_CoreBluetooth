@@ -42,7 +42,6 @@
 #define Blue_ISEMPTY(_v) (_v == nil || _v.length == 0)
 
 
-
 /********存储数据*********/
 #define Blue_EFUserDefaults [NSUserDefaults standardUserDefaults]
 
@@ -170,7 +169,26 @@ typedef union
  * p_encoded_data用于存储编码数据的缓冲区。
  */
 + (Nibble)readNibble:(uint8_t*_Nonnull*_Nonnull)p_encoded_data;
-
+/**
+ * 十进制转换为二进制
+ */
++ (NSString *)getBinaryByDecimal:(NSInteger)decimal;
+/**
+ * 十进制转换十六进制
+ */
++ (NSString *)getHexByDecimal:(NSInteger)decimal;
+/**
+ * 二进制转换成十六进制
+ */
++ (NSString *)getHexByBinary:(NSString *)binary;
+/**
+ * 十六进制转换为二进制
+ */
++ (NSString *)getBinaryByHex:(NSString *)hex;
+/**
+ * 二进制转换为十进制
+ */
++ (NSInteger)getDecimalByBinary:(NSString *)binary;
 @end
 
 NS_ASSUME_NONNULL_END
