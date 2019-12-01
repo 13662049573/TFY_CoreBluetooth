@@ -480,6 +480,62 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
     }
 }
 
+/**
+ *   扫描设备符合name的设备，不会停止。RSSI  属性名称，是否升序, YES-升序, NO-降序  需要手动关闭设备，这里只做符合条件返回数组
+ */
+- (void)scanDeviceWithAsyncName:(NSString *)name RSSIascending:(BOOL)ascending callback:(blueToothScanAllCallback)callback{
+    if (self.managerOptions.scanTimeOut == NSIntegerMax) {
+        self.managerOptions.scanTimeOut = 20 ;//默认一个时间
+        NSAssert(NO, @"您应该在EasyManagerOptions类上设置scanTimeOut值");
+    }
+    NSAssert(name, @"条件不能为零！");
+    NSAssert(callback, @"回调应该处理！");
+    
+    Blue_kWeakSelf(self)
+    __block NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:5];
+    [self.centerManager scanDeviceWithTimeInterval:self.managerOptions.scanTimeOut services:self.managerOptions.scanServiceArray  options:self.managerOptions.scanOptions callBack:^(TFY_EasyPeripheral *peripheral, searchFlagType searchType) {
+        
+        if (searchType&searchFlagTypeChanged || searchType&searchFlagTypeAdded) {
+            //2，收集错误信息
+            NSError *tempError = nil ;
+            if (weakself.centerManager.manager.state == CBManagerStatePoweredOff ) {
+                tempError = [NSError errorWithDomain:@"中心经理状态已关闭" code:bluetoothErrorStateNoReadly userInfo:nil];
+            }
+            else{
+                if (tempArray.count == 0) {
+                    tempError = [NSError errorWithDomain:@"没有找到设备 ！" code:bluetoothErrorStateNoDevice userInfo:nil];
+                }
+            }
+            // 排序key, 某个对象的属性名称，是否升序, YES-升序, NO-降序
+            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"RSSI" ascending:ascending];
+            // 排序结果
+            NSArray *arr = [tempArray sortedArrayUsingDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+            
+            //3，通知外部
+            callback(arr,tempError);
+            
+        }
+        
+        if ([name isKindOfClass:[NSString class]]) {
+            if ([peripheral.name isEqualToString:name]) {
+                BOOL isEixt = [TFY_EasyBlueToothManager isExitObject:peripheral inArray:tempArray];
+                if (!isEixt) {
+                    [tempArray addObject:peripheral];
+                }
+            }
+        }
+        else{
+            blueToothScanRule rule = (blueToothScanRule)name;
+            if (rule(peripheral)) {
+                BOOL isEixt = [TFY_EasyBlueToothManager isExitObject:peripheral inArray:tempArray];
+                if (!isEixt) {
+                    [tempArray addObject:peripheral];
+                }
+            }
+        }
+    }];
+}
+
 #pragma mark - 读写操作
 
 /**

@@ -193,6 +193,10 @@ typedef void (^blueToothOperationCallback)(NSData *data , NSError *error);
                                callback:(blueToothScanAllCallback)callback ;
 
 
+/**
+ *   扫描设备符合name的设备，不会停止。RSSI  属性名称，是否升序, YES-升序, NO-降序  需要手动关闭设备，这里只做符合条件返回数组
+ */
+- (void)scanDeviceWithAsyncName:(NSString *)name RSSIascending:(BOOL)ascending callback:(blueToothScanAllCallback)callback;
 #pragma mark - 读写操作
 
 /**
