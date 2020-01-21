@@ -522,6 +522,9 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
                 if (!isEixt) {
                     [tempArray addObject:peripheral];
                 }
+                else{
+                    [tempArray removeAllObjects];
+                }
             }
         }
         else{
