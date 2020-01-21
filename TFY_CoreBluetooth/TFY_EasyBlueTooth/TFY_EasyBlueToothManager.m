@@ -556,12 +556,10 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
 {
     Blue_kWeakSelf(self)
     [self searchCharacteristicWithPeripheral:peripheral serviceUUID:serviceUUID operationUUID:writeUUID callback:^(TFY_EasyCharacteristic *character, NSError *error) {
-        NSData *data=nil;
         if (error) {
             callback(data ,error);
             return  ;
         }
-        
         NSAssert(character, @"注意：特征为空");
         [character writeValueWithData:data callback:^(TFY_EasyCharacteristic *characteristic, NSData *data, NSError *error) {
             
@@ -594,9 +592,9 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
 {
     Blue_kWeakSelf(self)
     [self searchCharacteristicWithPeripheral:peripheral serviceUUID:serviceUUID operationUUID:readUUID callback:^(TFY_EasyCharacteristic *character, NSError *error) {
-        NSData *data=nil;
+        NSData *datas = nil;
         if (error) {
-            callback(data ,error);
+            callback(datas ,error);
             return ;
         }
         
@@ -633,9 +631,9 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
 {
     Blue_kWeakSelf(self)
     [self searchCharacteristicWithPeripheral:peripheral serviceUUID:serviceUUID operationUUID:notifyUUID callback:^(TFY_EasyCharacteristic *character, NSError *error) {
-        NSData *data=nil;
+        NSData *datas = nil;
         if (error) {
-            callback(data ,error);
+            callback(datas ,error);
             return  ;
         }
         
@@ -673,7 +671,6 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
                              callback:(blueToothOperationCallback)callback
 {
     [self searchCharacteristicWithPeripheral:peripheral serviceUUID:serviceUUID operationUUID:characterUUID callback:^(TFY_EasyCharacteristic *character, NSError *error) {
-        NSData *data=nil;
         if (error) {
             callback(data ,error );
             return ;
@@ -711,7 +708,7 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
     [self searchCharacteristicWithPeripheral:peripheral serviceUUID:serviceUUID operationUUID:characterUUID callback:^(TFY_EasyCharacteristic *character, NSError *error) {
         NSData *data=nil;
         if (error) {
-            callback(data ,error );
+            callback(data ,error);
             return  ;
         }
         NSAssert(character, @"注意：特征为空");
