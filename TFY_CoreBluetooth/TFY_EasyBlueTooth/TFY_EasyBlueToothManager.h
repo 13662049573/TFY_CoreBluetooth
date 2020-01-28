@@ -270,7 +270,7 @@ typedef void (^blueToothOperationCallback)(NSData *data , NSError *error);
  * 主动断开已经连接成功的设备操作
  * peripheral/identifier 代表设备
  */
-- (void)disconnectWithPeripheral:(TFY_EasyPeripheral *)peripheral ;
+- (void)disconnectWithPeripheral:(TFY_EasyPeripheral *)peripheral;
 - (void)disconnectWithIdentifier:(NSUUID *)identifier ;
 - (void)disconnectAllPeripheral ;
 
