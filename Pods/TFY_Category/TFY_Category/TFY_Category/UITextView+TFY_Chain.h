@@ -22,19 +22,19 @@ UITextView *tfy_textView(void);
 /**
  *  文本颜色
  */
-@property(nonatomic,copy,readonly)UITextView *(^tfy_textcolor)(UIColor *color_str);
+@property(nonatomic,copy,readonly)UITextView *(^tfy_textcolor)(id color_str);
 /**
  *  文本大小
  */
-@property(nonatomic,copy,readonly)UITextView *(^tfy_font)(CGFloat font_str);
+@property(nonatomic,copy,readonly)UITextView *(^tfy_font)(UIFont *font_str);
 /**
  *   title_str 文本文字 color_str 文字颜色  font文字大小
  */
-@property(nonatomic,copy,readonly)UITextView *(^tfy_title)(NSString *title_str,UIColor *color_str,CGFloat font);
+@property(nonatomic,copy,readonly)UITextView *(^tfy_title)(NSString *title_str,id color_str,UIFont *font);
 /**
  *    color 背景颜色
  */
-@property(nonatomic,copy,readonly)UITextView *(^tfy_backgroundColor)(UIColor *color);
+@property(nonatomic,copy,readonly)UITextView *(^tfy_backgroundColor)(id color);
 /**
  *    alignment 0 左 1 中 2 右
  */
@@ -42,11 +42,11 @@ UITextView *tfy_textView(void);
 /**
  *  添加四边框和color 颜色  borderWidth 宽度
  */
-@property(nonatomic,copy,readonly)UITextView *(^tfy_borders)(CGFloat borderWidth,UIColor *color);
+@property(nonatomic,copy,readonly)UITextView *(^tfy_borders)(CGFloat borderWidth,id color);
 /**
  *  添加四边 color_str阴影颜色  shadowRadius阴影半径
  */
-@property(nonatomic,copy,readonly)UITextView *(^tfy_bordersShadow)(UIColor *color, CGFloat shadowRadius);
+@property(nonatomic,copy,readonly)UITextView *(^tfy_bordersShadow)(id color, CGFloat shadowRadius);
 /**
  *  cornerRadius 圆角
  */

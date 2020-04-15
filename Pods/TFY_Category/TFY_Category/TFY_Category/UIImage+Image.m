@@ -245,19 +245,22 @@
  */
 + (UIImage *)tfy_viewShotWithView:(UIView *)view{
     
-    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0);
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(scale)]){
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, [UIScreen mainScreen].scale);
+    } else {
+        UIGraphicsBeginImageContext(view.bounds.size);
+    }
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *aImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return aImage;
+    
+    return image;
 }
 
 /**
- *  截屏
- *
- *  @return 返回截取的屏幕的图像
+ *  截屏 返回截取的屏幕的图像
  */
-+ (UIImage *)tfy_screenShot
+-(UIImage *)tfy_screenShot
 {
     CGSize imageSize = [[UIScreen mainScreen] bounds].size;
     //开启图形上下文
@@ -506,23 +509,6 @@
         return CGSizeZero;
     
     //NSString *absoluteString = URL.absoluteString;
-    
-#ifdef dispatch_main_sync_safe
-    if([[SDImageCache sharedImageCache] diskImageExistsWithKey:absoluteString])
-    {
-        UIImage* image = [[SDImageCache sharedImageCache] imageFromMemoryCacheForKey:absoluteString];
-        if(!image)
-        {
-            NSData* data = [[SDImageCache sharedImageCache] performSelector:@selector(diskImageDataBySearchingAllPathsForKey:) withObject:URL.absoluteString];
-            image = [UIImage imageWithData:data];
-        }
-        if(!image)
-        {
-            return image.size;
-        }
-    }
-#endif
-    
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:URL];
     NSString* pathExtendsion = [URL.pathExtension lowercaseString];
     
@@ -536,18 +522,6 @@
     }
     else{
         size = [self tfy_downloadJPGImageSizeWithRequest:request];
-    }
-    if(CGSizeEqualToSize(CGSizeZero, size))
-    {
-        NSData* data = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:URL] returningResponse:nil error:nil];
-        UIImage* image = [UIImage imageWithData:data];
-        if(image)
-        {
-#ifdef dispatch_main_sync_safe
-            [[SDImageCache sharedImageCache] storeImage:image recalculateFromImage:YES imageData:data forKey:URL.absoluteString toDisk:YES];
-#endif
-            size = image.size;
-        }
     }
     return size;
 }
@@ -733,41 +707,15 @@
 + (UIImage *)tfy_imageByApplyingAlpha:(CGFloat)alpha  image:(UIImage*)image {
     
     UIGraphicsBeginImageContextWithOptions(image.size, NO, 0.0f);
-    
-    
-    
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    
     CGRect area = CGRectMake(0, 0, image.size.width, image.size.height);
-    
-    
-    
     CGContextScaleCTM(ctx, 1, -1);
-    
     CGContextTranslateCTM(ctx, 0, -area.size.height);
-    
-    
-    
     CGContextSetBlendMode(ctx, kCGBlendModeMultiply);
-    
-    
-    
     CGContextSetAlpha(ctx, alpha);
-    
-    
-    
     CGContextDrawImage(ctx, area, image.CGImage);
-    
-    
-    
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    
-    
     UIGraphicsEndImageContext();
-    
-    
-    
     return newImage;
     
 }
@@ -819,7 +767,45 @@
         return [[[self alloc] init] tfy_getHDImageWithCIImage:outPutImage size:size waterImage:waterImage];;
     }
 }
+//生成二维码
++ (UIImage *)tfy_generateQRCodeWithString:(NSString *)string Size:(CGFloat)size
+{
+    //创建过滤器
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    //过滤器恢复默认
+    [filter setDefaults];
+    //给过滤器添加数据<字符串长度893>
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+    [filter setValue:data forKey:@"inputMessage"];
+    //获取二维码过滤器生成二维码
+    CIImage *image = [filter outputImage];
+    UIImage *img = [[[self alloc] init] createNonInterpolatedUIImageFromCIImage:image WithSize:size];
+    return img;
+}
 
+//二维码清晰
+- (UIImage *)createNonInterpolatedUIImageFromCIImage:(CIImage *)image WithSize:(CGFloat)size
+{
+    CGRect extent = CGRectIntegral(image.extent);
+    CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
+    
+    //创建bitmap
+    size_t width = CGRectGetWidth(extent)*scale;
+    size_t height = CGRectGetHeight(extent)*scale;
+    CGColorSpaceRef cs = CGColorSpaceCreateDeviceGray();
+    CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 0, cs, (CGBitmapInfo)kCGImageAlphaNone);
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef bitmapImage = [context createCGImage:image fromRect:extent];
+    CGContextSetInterpolationQuality(bitmapRef, kCGInterpolationNone);
+    CGContextScaleCTM(bitmapRef, scale, scale);
+    CGContextDrawImage(bitmapRef, extent, bitmapImage);
+    
+    //保存图片
+    CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
+    CGContextRelease(bitmapRef);
+    CGImageRelease(bitmapImage);
+    return [UIImage imageWithCGImage:scaledImage];
+}
 /**
  调整二维码清晰度
  
@@ -1090,7 +1076,7 @@ void TFY_ProviderReleaseData(void * info, const void * data, size_t size) {
     return resultImage;
 }
 //leftImage:左侧图片 rightImage:右侧图片 margin:两者间隔
-+ (UIImage *)tfy_combineWithLeftImg:(UIImage*)leftImage rightImg:(UIImage*)rightImage withMargin:(NSInteger)margin{
+- (UIImage *)tfy_combineWithLeftImg:(UIImage*)leftImage rightImg:(UIImage*)rightImage withMargin:(NSInteger)margin{
     if (rightImage == nil) {
         return leftImage;
     }
@@ -1137,5 +1123,41 @@ void TFY_ProviderReleaseData(void * info, const void * data, size_t size) {
     return resultImage;
     
  }
+/**
+ *  拼接快照 imagesArr 快照的数组
+ */
+#pragma mark 拼接快照
++ (UIImage *)getImageFromImagesArray:(NSArray *)imagesArr
+{
 
+    UIImage *image;
+    @autoreleasepool{
+        CGSize imageTotalSize = [self getImageTotalSizeFromImagesArray:imagesArr];
+        UIGraphicsBeginImageContextWithOptions(imageTotalSize, NO, [UIScreen mainScreen].scale);
+        
+        //拼接图片
+        int imageOffset = 0;
+        for (UIImage *images in imagesArr) {
+            [images drawAtPoint:CGPointMake(0, imageOffset)];
+            imageOffset += images.size.height;
+        }
+        
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    return image;
+
+}
+
+#pragma mark 获取全部图片拼接后size
++ (CGSize)getImageTotalSizeFromImagesArray:(NSArray *)imagesArr
+{
+    CGSize totalSize = CGSizeZero;
+    for (UIImage *image in imagesArr) {
+        CGSize imageSize = [image size];
+        totalSize.height += imageSize.height;
+        totalSize.width = MAX(totalSize.width, imageSize.width);
+    }
+    return totalSize;
+}
 @end

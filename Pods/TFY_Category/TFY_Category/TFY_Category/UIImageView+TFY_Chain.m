@@ -379,11 +379,11 @@ UIImageView *tfy_imageView(void){
 #pragma mark - public method
 
 - (void)tfy_setImageWithURLString:(NSString *)url placeholderImageName:(NSString *)placeholderImageName {
-    return [self tfy_setImageWithURLString:url placeholderImageName:placeholderImageName completion:nil];
+    return [self tfy_setImageWithURLString:url placeholderImageName:placeholderImageName completion:^(UIImage * _Nonnull image) {}];
 }
 
 - (void)tfy_setImageWithURLString:(NSString *)url placeholder:(UIImage *)placeholderImage {
-    return [self tfy_setImageWithURLString:url placeholder:placeholderImage completion:nil];
+    return [self tfy_setImageWithURLString:url placeholder:placeholderImage completion:^(UIImage * _Nonnull image) {}];
 }
 
 - (void)tfy_setImageWithURLString:(NSString *)url placeholderImageName:(NSString *)placeholderImage completion:(void (^)(UIImage *image))completion {
@@ -491,7 +491,7 @@ UIImageView *tfy_imageView(void){
     }
     
     [self cancelRequest];
-    self.tfy_imageDownloader = nil;
+    self.tfy_imageDownloader = [ImageDownloader new];
     
     WSelf(myslef);
     

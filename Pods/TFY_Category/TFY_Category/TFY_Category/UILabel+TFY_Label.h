@@ -13,20 +13,55 @@
 /**
  *  RichTextDelegate  string  点击的字符串  range   点击的字符串range  index   点击的字符在数组中的index
  */
-- (void)tfy_didClickRichText:(NSString *)string range:(NSRange)range index:(NSInteger)index;
+- (void)tfy_tapAttributeInLabel:(UILabel *)label string:(NSString *)string range:(NSRange)range index:(NSInteger)index;;
 @end
+
+@interface NSAttributedString (TFY_Chain)
+/**lable点击颜色设置*/
++(NSAttributedString *)getAttributeId:(id)sender string:(NSString *)string orginFont:(CGFloat)orginFont orginColor:(UIColor *)orginColor attributeFont:(CGFloat)attributeFont attributeColor:(UIColor *)attributeColor;
+
+@end
+
 
 @interface UILabel (TFY_Label)
 
 /**
  *  是否打开点击效果，默认是打开
  */
-@property (nonatomic, assign) BOOL tfy_enabledClickEffect;
+@property (nonatomic, assign) BOOL enabledTapEffect;
 
 /**
- *  点击效果颜色 默认lightGrayColor
+ *  点击高亮色 默认是[UIColor lightGrayColor] 需打开enabledTapEffect才有效
  */
-@property (nonatomic, strong) UIColor *tfy_clickEffectColor;
+@property (nonatomic, strong) UIColor * tapHighlightedColor;
+/**
+ *  是否扩大点击范围，默认是打开
+ */
+@property (nonatomic, assign) BOOL enlargeTapArea;
+/**
+ *  给文本添加点击事件Block回调  strings  需要添加的字符串数组  tapClick 点击事件回调
+ */
+- (void)tfy_addAttributeTapActionWithStrings:(NSArray <NSString *> *)strings tapClicked:(void (^) (UILabel * label, NSString *string, NSRange range, NSInteger index))tapClick;
+
+/**
+ *  给文本添加点击事件delegate回调  strings  需要添加的字符串数组  delegate delegate
+ */
+- (void)tfy_addAttributeTapActionWithStrings:(NSArray <NSString *> *)strings delegate:(id <TFY_RichTextDelegate> )delegate;
+
+/**
+ *  根据range给文本添加点击事件Block回调 ranges 需要添加的Range字符串数组  tapClick 点击事件回调
+ */
+- (void)tfy_addAttributeTapActionWithRanges:(NSArray <NSString *> *)ranges tapClicked:(void (^) (UILabel * label, NSString *string, NSRange range, NSInteger index))tapClick;
+
+/**
+ *  根据range给文本添加点击事件delegate回调 ranges  需要添加的Range字符串数组 delegate delegate
+ */
+- (void)tfy_addAttributeTapActionWithRanges:(NSArray <NSString *> *)ranges delegate:(id <TFY_RichTextDelegate> )delegate;
+
+/**
+ *  删除label上的点击事件
+ */
+- (void)tfy_removeAttributeTapActions;
 /**
  *  初始化Label
  */
@@ -36,13 +71,13 @@ UILabel *tfy_label(void);
  */
 @property(nonatomic,copy,readonly)UILabel *(^tfy_text)(NSString *text);
 /**
- *  文本输入颜色和透明度
+ *  文本输入颜色和透明度 HexString 表示NSString或者UIColor
  */
-@property(nonatomic,copy,readonly)UILabel *(^tfy_textcolor)(NSString *HexString,CGFloat alpha);
+@property(nonatomic,copy,readonly)UILabel *(^tfy_textcolor)(id HexString,CGFloat alpha);
 /**
  *  文本字体大小
  */
-@property(nonatomic,copy,readonly)UILabel *(^tfy_fontSize)(CGFloat fontSize);
+@property(nonatomic,copy,readonly)UILabel *(^tfy_fontSize)(UIFont *fontSize);
 /**
  *  文本字体位置 0 左 1 中 2 右
  */
@@ -62,7 +97,7 @@ UILabel *tfy_label(void);
 /**
  *  背景颜色和 alpha透明度  HexString 字符串颜色
  */
-@property(nonatomic,copy,readonly)UILabel *(^tfy_backgroundColor)(NSString *HexString,CGFloat alpha);
+@property(nonatomic,copy,readonly)UILabel *(^tfy_backgroundColor)(id HexString,CGFloat alpha);
 /**
  *  按钮  cornerRadius 圆角
  */
@@ -70,21 +105,11 @@ UILabel *tfy_label(void);
 /**
  *  添加四边框和color 颜色  borderWidth 宽度
  */
-@property(nonatomic,copy,readonly)UILabel *(^tfy_borders)(CGFloat borderWidth, NSString *color);
+@property(nonatomic,copy,readonly)UILabel *(^tfy_borders)(CGFloat borderWidth, id color);
 /**
  *  添加四边 color_str阴影颜色  shadowRadius阴影半径
  */
-@property(nonatomic,copy,readonly)UILabel *(^tfy_bordersShadow)(NSString *color_str, CGFloat shadowRadius);
-
-
-/**
- *  给文本添加Block点击事件回调 strings  需要添加的字符串数组  clickAction 点击事件回调
- */
-- (void)tfy_clickRichTextWithStrings:(NSArray <NSString *> *)strings clickAction:(void (^) (NSString *string, NSRange range, NSInteger index))clickAction;
-
-/**
- *  给文本添加点击事件delegate回调 strings  需要添加的字符串数组  delegate 富文本代理
- */
-- (void)tfy_clickRichTextWithStrings:(NSArray <NSString *> *)strings delegate:(id <TFY_RichTextDelegate> )delegate;
+@property(nonatomic,copy,readonly)UILabel *(^tfy_bordersShadow)(id color_str, CGFloat shadowRadius);
 
 @end
+

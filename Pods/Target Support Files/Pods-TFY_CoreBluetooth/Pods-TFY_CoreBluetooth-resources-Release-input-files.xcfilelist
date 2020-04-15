@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-TFY_CoreBluetooth/Pods-TFY_CoreBluetooth-resources.sh
 ${PODS_ROOT}/TFY_ProgressHUD/TFY_ProgressHUD/TFY_ProgressHUD/TFY_ProgressHUD.bundle
+${PODS_ROOT}/TFY_ProgressHUD/TFY_ProgressHUD/TFY_ProgressHUD/TFY_PromptpopupHeader.h
