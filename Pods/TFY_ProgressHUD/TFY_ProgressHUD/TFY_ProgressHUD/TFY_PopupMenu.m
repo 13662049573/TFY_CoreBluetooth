@@ -296,7 +296,7 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(tfy_PopupMenuBeganDismiss)]) {
         [self.delegate tfy_PopupMenuBeganDismiss];
     }
-    [UIView animateWithDuration: 0.25 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.layer.affineTransform = CGAffineTransformMakeScale(0.1, 0.1);
         self.alpha = 0;
         self-> _menuBackView.alpha = 0;

@@ -31,7 +31,8 @@ typedef NS_ENUM(NSUInteger, ProgressHUDType){
     ProgressHUD_ERROR = 0,  // 错误信息
     ProgressHUD_SUCCESS,    // 成功信息
     ProgressHUD_PROMPT,     // 提示信息
-    ProgressHUD_LOADING     //加载圈
+    ProgressHUD_LOADING,     //加载圈
+    ProgressHUD_DISMISS
 };
 
 static const CGFloat kDefaultSpringDamping = 0.8;
@@ -218,19 +219,20 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
     if (status == ProgressHUD_LOADING) {
         [self show];
     }
+    if (status == ProgressHUD_DISMISS) {
+        [self dismiss];
+    }
     else{
-      [self showWithDuration:time];
+       [self showWithDuration:time];
     }
 }
 
-+ (TFY_ProgressHUD *)popupWithContentView:(UIView *)contentView showType:(TFY_PopupShowType)showType dismissType:(TFY_PopupDismissType)dismissType maskType:(TFY_PopupMaskType)maskType dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch {
++ (TFY_ProgressHUD *)popupWithContentView:(UIView *)contentView showType:(TFY_PopupShowType)showType dismissType:(TFY_PopupDismissType)dismissType maskType:(TFY_PopupMaskType)maskType{
     TFY_ProgressHUD *popup = [[[self class] alloc] init];
     popup.contentView = contentView;
     popup.showType = showType;
     popup.dismissType = dismissType;
     popup.maskType = maskType;
-    popup.shouldDismissOnBackgroundTouch = shouldDismissOnBackgroundTouch;
-    popup.shouldDismissOnContentTouch = shouldDismissOnContentTouch;
     return popup;
 }
 
@@ -243,8 +245,15 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
     }
 }
 
-+ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated {
-    [view dismissShowingPopup:animated];
++ (void)dismissStatus:(NSString *)string{
+    [[TFY_ProgressHUD sharedView] showToastVieWiththContent:string showType:TFY_PopupShowType_FadeIn dismissType:TFY_PopupDismissType_ShrinkOut maskType:TFY_PopupMaskType_None Status:ProgressHUD_DISMISS stopTime:1];
+}
+
+/**
+ * 关闭对应的弹出框
+ */
++ (void)dismiss{
+    [self dismissSuperPopupIn:[TFY_ProgressHUD sharedView].hudView animated:YES];
 }
 
 + (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated {
@@ -303,14 +312,15 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
 
 - (void)StatusContentString:(NSString *)content AttributedString:(NSAttributedString *)attributedString Status:(ProgressHUDType)status{
     dispatch_async(dispatch_get_main_queue(), ^{
+        UIImage *image;
         if(status == ProgressHUD_ERROR){
-            self.imageView.image = [UIImage imageNamed:@"my_error" inBundle:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"TFY_ProgressHUD" ofType:@"bundle"]] compatibleWithTraitCollection:nil];
+            image = [self tfy_fileImage:@"my_error" fileName:nil];
         }
         if(status == ProgressHUD_SUCCESS) {
-            self.imageView.image = [UIImage imageNamed:@"my_success" inBundle:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"TFY_ProgressHUD" ofType:@"bundle"]] compatibleWithTraitCollection:nil];
+            image = [self tfy_fileImage:@"my_success" fileName:nil];
         }
         if(status == ProgressHUD_PROMPT) {
-            self.imageView.image = [UIImage imageNamed:@"my_prompt" inBundle:[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"TFY_ProgressHUD" ofType:@"bundle"]] compatibleWithTraitCollection:nil];
+            image = [self tfy_fileImage:@"my_prompt" fileName:nil];
         }
         if (status == ProgressHUD_LOADING){
             self.imageView.hidden = YES;
@@ -319,9 +329,20 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
         if (status!=ProgressHUD_LOADING) {
             self.imageView.hidden = NO;
             [self.spinnerView stopAnimating];
+            if ([image isKindOfClass:[UIImage class]]) {
+                self.imageView.image = image;
+            }
+            else{
+                self.imageView.hidden = YES;
+                [self.spinnerView startAnimating];
+            }
         }
        [self setStatusContentString:content AttributedString:attributedString];
     });
+}
+
+-(UIImage *)tfy_fileImage:(NSString *)fileImage fileName:(NSString *)fileName {
+    return [UIImage imageWithContentsOfFile:[[[[NSBundle mainBundle] pathForResource:@"TFY_ProgressHUD" ofType:@"bundle"] stringByAppendingPathComponent:fileName] stringByAppendingPathComponent:fileImage]];
 }
 
 - (void)setStatusContentString:(NSString *)content AttributedString:(NSAttributedString *)attributedString{
@@ -396,7 +417,6 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
                     }
                 }
             }
-            
             [strongSelf updateInterfaceOrientation];
             
             strongSelf.hidden = NO;
@@ -406,7 +426,15 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
             strongSelf.backgroundView.alpha = 0.0;
             if (strongSelf.maskType == TFY_PopupMaskType_Dimmed) {
                 strongSelf.backgroundView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:strongSelf.dimmedMaskAlpha];
-            } else {
+                strongSelf.shouldDismissOnBackgroundTouch = NO;
+                strongSelf.shouldDismissOnContentTouch = NO;
+            }
+            if (strongSelf.maskType == TFY_PopupMaskType_Clear) {
+                strongSelf.backgroundView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
+                strongSelf.shouldDismissOnBackgroundTouch = YES;
+                strongSelf.shouldDismissOnContentTouch = NO;
+            }
+            if (strongSelf.maskType == TFY_PopupMaskType_None) {
                 strongSelf.backgroundView.backgroundColor = UIColor.clearColor;
             }
             
@@ -702,6 +730,7 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
             }
             
             void (^completionBlock)(BOOL) = ^(BOOL finished) {
+                [strongSelf.spinnerView stopAnimating];
                 [strongSelf.hudView removeFromSuperview];
                 strongSelf.hudView = nil;
                 [strongSelf.stringLabel removeFromSuperview];

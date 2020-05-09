@@ -4,7 +4,7 @@
 //
 //  Created by 田风有 on 2019/5/11.
 //  Copyright © 2019 恋机科技. All rights reserved.
-//
+//  version      = "2.3.4"
 
 #import <UIKit/UIKit.h>
 
@@ -166,29 +166,49 @@ extern const TFY_PopupLayout TFY_PopupLayout_Center;
 /**
  * 弹出一个自定义视图 contentView 自定义视图  showType 弹出动画 dismissType 消失动画 maskType 交互类型 shouldDismissOnBackgroundTouch 当背景被触摸时，弹出窗口会消失 默认yes shouldDismissOnContentTouch 当内容视图被触摸时，弹出窗口会消失默认no
  */
-+ (TFY_ProgressHUD *)popupWithContentView:(UIView *)contentView showType:(TFY_PopupShowType)showType dismissType:(TFY_PopupDismissType)dismissType maskType:(TFY_PopupMaskType)maskType dismissOnBackgroundTouch:(BOOL)shouldDismissOnBackgroundTouch dismissOnContentTouch:(BOOL)shouldDismissOnContentTouch;
++ (TFY_ProgressHUD *)popupWithContentView:(UIView *)contentView showType:(TFY_PopupShowType)showType dismissType:(TFY_PopupDismissType)dismissType maskType:(TFY_PopupMaskType)maskType;
 
-
+/**关闭所有弹出框*/
 + (void)dismissAllPopups;
-
-+ (void)dismissPopupForView:(UIView *)view animated:(BOOL)animated;
-
+/**
+ * 关闭提示框 (只对提示框有效)
+ */
++ (void)dismiss;
+/**
+ * 关闭文本 (只对提示框有效)
+ */
++ (void)dismissStatus:(NSString *)string;
+/**
+ * 关闭自定义对应View
+ */
 + (void)dismissSuperPopupIn:(UIView *)view animated:(BOOL)animated;
-
+/**
+ * 自定义View 弹出
+ */
 - (void)show;
-
+/**
+ * 自定义弹出框适应横竖屏
+ */
 - (void)showWithLayout:(TFY_PopupLayout)layout;
-
+/**
+ *  自定义View 弹出时间
+ */
 - (void)showWithDuration:(NSTimeInterval)duration;
-
+/**
+ * 自定义弹出框适应横竖屏 启动时间
+ */
 - (void)showWithLayout:(TFY_PopupLayout)layout duration:(NSTimeInterval)duration;
-
+/**
+ * 自定义弹出框位置
+ */
 - (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view;
-
+/**
+ * 自定义弹出框位置 时间
+ */
 - (void)showAtCenterPoint:(CGPoint)point inView:(UIView *)view duration:(NSTimeInterval)duration;
 
 /**
-  取消所有提示 animated 是否需要动画
+ * 取消所有提示 animated 是否需要动画
  */
 - (void)dismissAnimated:(BOOL)animated;
 

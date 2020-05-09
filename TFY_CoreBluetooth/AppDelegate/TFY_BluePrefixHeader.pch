@@ -15,7 +15,6 @@
 #import <TFY_CategoryHerder.h>
 #import <TFY_Navigation.h>
 #import <TFY_ProgressHUD.h>
-#import <TFY_SimplifytableHeader.h>
 
 #endif
 
