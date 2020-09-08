@@ -161,6 +161,7 @@
 		565A15C3235E885600B36531 /* TFY_EasyBlueTooth */ = {
 			isa = PBXGroup;
 			children = (
+				565A15D6235E885600B36531 /* TFY_BlueHeader.h */,
 				36CB6314238FFB76005976FF /* TFY_EasyBlueToothManager.h */,
 				36CB631F238FFB77005976FF /* TFY_EasyBlueToothManager.m */,
 				36CB631D238FFB77005976FF /* TFY_EasyCenterManager.h */,
@@ -177,7 +178,6 @@
 				36CB6316238FFB76005976FF /* TFY_EasyService.m */,
 				36CB6310238FDF6A005976FF /* TFY_EasyUtils.h */,
 				36CB630F238FDF6A005976FF /* TFY_EasyUtils.m */,
-				565A15D6235E885600B36531 /* TFY_BlueHeader.h */,
 			);
 			path = TFY_EasyBlueTooth;
 			sourceTree = "<group>";
