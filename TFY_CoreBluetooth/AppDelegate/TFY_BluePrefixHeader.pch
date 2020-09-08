@@ -20,6 +20,6 @@
 #endif
 
 #import "TFY_BlueHeader.h"
-
+#import "TFY_BlueModel.h"
 
 #endif /* TFY_BluePrefixHeader_pch */

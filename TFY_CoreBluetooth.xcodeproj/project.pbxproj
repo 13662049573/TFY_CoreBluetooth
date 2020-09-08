@@ -11,6 +11,21 @@
 		3651C1DA250727F5002701E7 /* TFY_TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C1D9250727F5002701E7 /* TFY_TabBarController.m */; };
 		3651C1E725072A3C002701E7 /* TFY_HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C1E625072A3C002701E7 /* TFY_HomeController.m */; };
 		3651C1EA25072A60002701E7 /* TFY_MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C1E925072A60002701E7 /* TFY_MineController.m */; };
+		3651C1F025072F1E002701E7 /* TFY_HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C1EF25072F1E002701E7 /* TFY_HomeTableViewCell.m */; };
+		3651C1F32507310A002701E7 /* TFY_BlueModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C1F22507310A002701E7 /* TFY_BlueModel.m */; };
+		3651C1F625075A62002701E7 /* TFY_DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C1F525075A62002701E7 /* TFY_DetailViewController.m */; };
+		3651C1F925075E73002701E7 /* TFY_DetailOneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C1F825075E73002701E7 /* TFY_DetailOneTableViewCell.m */; };
+		3651C20225076723002701E7 /* TFY_DetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C20125076723002701E7 /* TFY_DetailHeaderView.m */; };
+		3651C20525076757002701E7 /* TFY_DetailHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C20425076757002701E7 /* TFY_DetailHeaderFooterView.m */; };
+		3651C20825076CFF002701E7 /* TFY_DetailOperationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C20725076CFF002701E7 /* TFY_DetailOperationController.m */; };
+		3651C20B25076E36002701E7 /* TFY_DetailOperationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C20A25076E36002701E7 /* TFY_DetailOperationCell.m */; };
+		3651C20E2507756A002701E7 /* TFY_MineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C20D2507756A002701E7 /* TFY_MineTableViewCell.m */; };
+		3651C211250776EE002701E7 /* TFY_ExampleScanNameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C210250776EE002701E7 /* TFY_ExampleScanNameController.m */; };
+		3651C2142507790D002701E7 /* TFY_ExampleScanRuleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C2132507790D002701E7 /* TFY_ExampleScanRuleController.m */; };
+		3651C217250779AF002701E7 /* TFY_ExampleSavedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C216250779AF002701E7 /* TFY_ExampleSavedController.m */; };
+		3651C21A25077A22002701E7 /* TFY_BindingDeviceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C21925077A22002701E7 /* TFY_BindingDeviceView.m */; };
+		3651C21D25077CD5002701E7 /* TFY_ExampleOneLineCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C21C25077CD5002701E7 /* TFY_ExampleOneLineCodeController.m */; };
+		3651C22025077D4A002701E7 /* TFY_ExampleAllRuleDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3651C21F25077D4A002701E7 /* TFY_ExampleAllRuleDeviceController.m */; };
 		36CB6311238FDF6A005976FF /* TFY_EasyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CB630F238FDF6A005976FF /* TFY_EasyUtils.m */; };
 		36CB6320238FFB77005976FF /* TFY_EasyManagerOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CB6312238FFB76005976FF /* TFY_EasyManagerOptions.m */; };
 		36CB6321238FFB77005976FF /* TFY_EasyPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CB6315238FFB76005976FF /* TFY_EasyPeripheral.m */; };
@@ -57,6 +72,36 @@
 		3651C1E625072A3C002701E7 /* TFY_HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_HomeController.m; sourceTree = "<group>"; };
 		3651C1E825072A60002701E7 /* TFY_MineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_MineController.h; sourceTree = "<group>"; };
 		3651C1E925072A60002701E7 /* TFY_MineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_MineController.m; sourceTree = "<group>"; };
+		3651C1EE25072F1E002701E7 /* TFY_HomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_HomeTableViewCell.h; sourceTree = "<group>"; };
+		3651C1EF25072F1E002701E7 /* TFY_HomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_HomeTableViewCell.m; sourceTree = "<group>"; };
+		3651C1F12507310A002701E7 /* TFY_BlueModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_BlueModel.h; sourceTree = "<group>"; };
+		3651C1F22507310A002701E7 /* TFY_BlueModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_BlueModel.m; sourceTree = "<group>"; };
+		3651C1F425075A62002701E7 /* TFY_DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_DetailViewController.h; sourceTree = "<group>"; };
+		3651C1F525075A62002701E7 /* TFY_DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_DetailViewController.m; sourceTree = "<group>"; };
+		3651C1F725075E73002701E7 /* TFY_DetailOneTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_DetailOneTableViewCell.h; sourceTree = "<group>"; };
+		3651C1F825075E73002701E7 /* TFY_DetailOneTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_DetailOneTableViewCell.m; sourceTree = "<group>"; };
+		3651C20025076723002701E7 /* TFY_DetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_DetailHeaderView.h; sourceTree = "<group>"; };
+		3651C20125076723002701E7 /* TFY_DetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_DetailHeaderView.m; sourceTree = "<group>"; };
+		3651C20325076756002701E7 /* TFY_DetailHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_DetailHeaderFooterView.h; sourceTree = "<group>"; };
+		3651C20425076757002701E7 /* TFY_DetailHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_DetailHeaderFooterView.m; sourceTree = "<group>"; };
+		3651C20625076CFF002701E7 /* TFY_DetailOperationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_DetailOperationController.h; sourceTree = "<group>"; };
+		3651C20725076CFF002701E7 /* TFY_DetailOperationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_DetailOperationController.m; sourceTree = "<group>"; };
+		3651C20925076E36002701E7 /* TFY_DetailOperationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_DetailOperationCell.h; sourceTree = "<group>"; };
+		3651C20A25076E36002701E7 /* TFY_DetailOperationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_DetailOperationCell.m; sourceTree = "<group>"; };
+		3651C20C2507756A002701E7 /* TFY_MineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_MineTableViewCell.h; sourceTree = "<group>"; };
+		3651C20D2507756A002701E7 /* TFY_MineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_MineTableViewCell.m; sourceTree = "<group>"; };
+		3651C20F250776EE002701E7 /* TFY_ExampleScanNameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_ExampleScanNameController.h; sourceTree = "<group>"; };
+		3651C210250776EE002701E7 /* TFY_ExampleScanNameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_ExampleScanNameController.m; sourceTree = "<group>"; };
+		3651C2122507790D002701E7 /* TFY_ExampleScanRuleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_ExampleScanRuleController.h; sourceTree = "<group>"; };
+		3651C2132507790D002701E7 /* TFY_ExampleScanRuleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_ExampleScanRuleController.m; sourceTree = "<group>"; };
+		3651C215250779AF002701E7 /* TFY_ExampleSavedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_ExampleSavedController.h; sourceTree = "<group>"; };
+		3651C216250779AF002701E7 /* TFY_ExampleSavedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_ExampleSavedController.m; sourceTree = "<group>"; };
+		3651C21825077A22002701E7 /* TFY_BindingDeviceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_BindingDeviceView.h; sourceTree = "<group>"; };
+		3651C21925077A22002701E7 /* TFY_BindingDeviceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_BindingDeviceView.m; sourceTree = "<group>"; };
+		3651C21B25077CD5002701E7 /* TFY_ExampleOneLineCodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_ExampleOneLineCodeController.h; sourceTree = "<group>"; };
+		3651C21C25077CD5002701E7 /* TFY_ExampleOneLineCodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_ExampleOneLineCodeController.m; sourceTree = "<group>"; };
+		3651C21E25077D4A002701E7 /* TFY_ExampleAllRuleDeviceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_ExampleAllRuleDeviceController.h; sourceTree = "<group>"; };
+		3651C21F25077D4A002701E7 /* TFY_ExampleAllRuleDeviceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFY_ExampleAllRuleDeviceController.m; sourceTree = "<group>"; };
 		36CB630F238FDF6A005976FF /* TFY_EasyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyUtils.m; sourceTree = "<group>"; };
 		36CB6310238FDF6A005976FF /* TFY_EasyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyUtils.h; sourceTree = "<group>"; };
 		36CB6312238FFB76005976FF /* TFY_EasyManagerOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyManagerOptions.m; sourceTree = "<group>"; };
@@ -149,6 +194,10 @@
 			children = (
 				3651C1E525072A3C002701E7 /* TFY_HomeController.h */,
 				3651C1E625072A3C002701E7 /* TFY_HomeController.m */,
+				3651C1F425075A62002701E7 /* TFY_DetailViewController.h */,
+				3651C1F525075A62002701E7 /* TFY_DetailViewController.m */,
+				3651C20625076CFF002701E7 /* TFY_DetailOperationController.h */,
+				3651C20725076CFF002701E7 /* TFY_DetailOperationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,6 +205,12 @@
 		3651C1DD25072A05002701E7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3651C1EE25072F1E002701E7 /* TFY_HomeTableViewCell.h */,
+				3651C1EF25072F1E002701E7 /* TFY_HomeTableViewCell.m */,
+				3651C1F725075E73002701E7 /* TFY_DetailOneTableViewCell.h */,
+				3651C1F825075E73002701E7 /* TFY_DetailOneTableViewCell.m */,
+				3651C20925076E36002701E7 /* TFY_DetailOperationCell.h */,
+				3651C20A25076E36002701E7 /* TFY_DetailOperationCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -163,6 +218,8 @@
 		3651C1DE25072A05002701E7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3651C1F12507310A002701E7 /* TFY_BlueModel.h */,
+				3651C1F22507310A002701E7 /* TFY_BlueModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +227,10 @@
 		3651C1DF25072A05002701E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3651C20325076756002701E7 /* TFY_DetailHeaderFooterView.h */,
+				3651C20425076757002701E7 /* TFY_DetailHeaderFooterView.m */,
+				3651C20025076723002701E7 /* TFY_DetailHeaderView.h */,
+				3651C20125076723002701E7 /* TFY_DetailHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,7 +240,6 @@
 			children = (
 				3651C1E125072A05002701E7 /* Controller */,
 				3651C1E225072A05002701E7 /* Cell */,
-				3651C1E325072A05002701E7 /* Model */,
 				3651C1E425072A05002701E7 /* View */,
 			);
 			path = Mine;
@@ -190,6 +250,16 @@
 			children = (
 				3651C1E825072A60002701E7 /* TFY_MineController.h */,
 				3651C1E925072A60002701E7 /* TFY_MineController.m */,
+				3651C20F250776EE002701E7 /* TFY_ExampleScanNameController.h */,
+				3651C210250776EE002701E7 /* TFY_ExampleScanNameController.m */,
+				3651C2122507790D002701E7 /* TFY_ExampleScanRuleController.h */,
+				3651C2132507790D002701E7 /* TFY_ExampleScanRuleController.m */,
+				3651C215250779AF002701E7 /* TFY_ExampleSavedController.h */,
+				3651C216250779AF002701E7 /* TFY_ExampleSavedController.m */,
+				3651C21B25077CD5002701E7 /* TFY_ExampleOneLineCodeController.h */,
+				3651C21C25077CD5002701E7 /* TFY_ExampleOneLineCodeController.m */,
+				3651C21E25077D4A002701E7 /* TFY_ExampleAllRuleDeviceController.h */,
+				3651C21F25077D4A002701E7 /* TFY_ExampleAllRuleDeviceController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,20 +267,17 @@
 		3651C1E225072A05002701E7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				3651C20C2507756A002701E7 /* TFY_MineTableViewCell.h */,
+				3651C20D2507756A002701E7 /* TFY_MineTableViewCell.m */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		3651C1E325072A05002701E7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		3651C1E425072A05002701E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3651C21825077A22002701E7 /* TFY_BindingDeviceView.h */,
+				3651C21925077A22002701E7 /* TFY_BindingDeviceView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -510,15 +577,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3651C21A25077A22002701E7 /* TFY_BindingDeviceView.m in Sources */,
 				3651C1EA25072A60002701E7 /* TFY_MineController.m in Sources */,
+				3651C1F925075E73002701E7 /* TFY_DetailOneTableViewCell.m in Sources */,
 				36CB6325238FFB77005976FF /* TFY_EasyCharacteristic.m in Sources */,
+				3651C21D25077CD5002701E7 /* TFY_ExampleOneLineCodeController.m in Sources */,
 				5680B1C6233E3B1E0081C5FA /* main.m in Sources */,
 				5680B1F7233E3BF50081C5FA /* SceneDelegate.m in Sources */,
+				3651C1F625075A62002701E7 /* TFY_DetailViewController.m in Sources */,
 				5680B1F8233E3BF50081C5FA /* AppDelegate.m in Sources */,
+				3651C1F32507310A002701E7 /* TFY_BlueModel.m in Sources */,
+				3651C217250779AF002701E7 /* TFY_ExampleSavedController.m in Sources */,
+				3651C20E2507756A002701E7 /* TFY_MineTableViewCell.m in Sources */,
 				36CB6324238FFB77005976FF /* TFY_EasyDescriptor.m in Sources */,
 				36CB6326238FFB77005976FF /* TFY_EasyBlueToothManager.m in Sources */,
+				3651C2142507790D002701E7 /* TFY_ExampleScanRuleController.m in Sources */,
+				3651C1F025072F1E002701E7 /* TFY_HomeTableViewCell.m in Sources */,
+				3651C20525076757002701E7 /* TFY_DetailHeaderFooterView.m in Sources */,
+				3651C20B25076E36002701E7 /* TFY_DetailOperationCell.m in Sources */,
+				3651C22025077D4A002701E7 /* TFY_ExampleAllRuleDeviceController.m in Sources */,
 				36CB6311238FDF6A005976FF /* TFY_EasyUtils.m in Sources */,
+				3651C20825076CFF002701E7 /* TFY_DetailOperationController.m in Sources */,
 				36CB6323238FFB77005976FF /* TFY_EasyCenterManager.m in Sources */,
+				3651C20225076723002701E7 /* TFY_DetailHeaderView.m in Sources */,
+				3651C211250776EE002701E7 /* TFY_ExampleScanNameController.m in Sources */,
 				36CB6320238FFB77005976FF /* TFY_EasyManagerOptions.m in Sources */,
 				3651C1DA250727F5002701E7 /* TFY_TabBarController.m in Sources */,
 				36CB6322238FFB77005976FF /* TFY_EasyService.m in Sources */,
