@@ -329,20 +329,6 @@
 
 #pragma mark - CBPeripheralDelegate Methods
 
-- (void)peripheralDidUpdateRSSI:(CBPeripheral *)peripheral error:(NSError *)error
-{
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    Blue_EasyLog_R(@"\n设备的rssi读取 %@ rssi:%@ error:%@",peripheral.identifier,peripheral.RSSI,error);
-
-    self.RSSI = peripheral.RSSI ;
-    if (_blueToothReadRSSICallback) {
-        _blueToothReadRSSICallback(self ,peripheral.RSSI ,error );
-    }
-#pragma clang diagnostic pop
-    
-}
-
 - (void)peripheral:(CBPeripheral *)peripheral didReadRSSI:(NSNumber *)RSSI error:(NSError *)error
 {
     Blue_EasyLog_R(@"\n设备的rssi读取 %@ rssi:%@ error:%@",peripheral.identifier,RSSI,error);
@@ -351,7 +337,6 @@
     if (_blueToothReadRSSICallback) {
         _blueToothReadRSSICallback(self , RSSI ,error );
     }
-    
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error

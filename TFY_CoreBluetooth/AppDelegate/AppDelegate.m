@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "TFY_TabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,14 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    if (![ScenePackage defaultPackage].isSceneApp) {
+    if (!TFY_ScenePackage.isSceneApp) {
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         self.window.backgroundColor = [UIColor whiteColor];
         [self.window makeKeyAndVisible];
     }
-    [[ScenePackage defaultPackage] addBeforeWindowEvent:^(ScenePackage * _Nonnull application) {
-        TFY_NavigationController *nav = [[TFY_NavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-        [UIApplication window].rootViewController = nav;
+    [TFY_ScenePackage addBeforeWindowEvent:^(TFY_Scene * _Nonnull application) {
+        [UIApplication tfy_window].rootViewController = [TFY_TabBarController new];
     }];
     return YES;
 }
