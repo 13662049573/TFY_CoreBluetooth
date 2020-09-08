@@ -30,7 +30,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-## TFY_Category
+## TFY_LayoutCategoryKit
 
 
 The MIT License (MIT)
@@ -39,7 +39,7 @@ Copyright (c) 2019 田风有 The MIT License (MIT)
 
 Copyright (c) 2019 田风有
 
-Copyright (c) 2019-2026 YJSettingTableView Software Foundation (https://github.com/13662049573/TFY_Category)
+Copyright (c) 2019-2026 YJSettingTableView Software Foundation (https://github.com/13662049573/TFY_LayoutCategoryUtil.git)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

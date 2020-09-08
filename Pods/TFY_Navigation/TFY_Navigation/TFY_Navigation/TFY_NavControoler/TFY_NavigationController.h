@@ -32,38 +32,45 @@
 
 @interface TFY_NavigationController : TFYContainerNavigationController
 /**
- *  按钮图标,默认`白色箭头`
+ *   导航栏背景图片
  */
-@property (nonatomic, strong)UIImage *backIconImage;
+@property (nonatomic, strong)UIImage * _Nonnull barBackgroundImage;
 /**
- *  初始导航栏颜色为黑色，也可以自己创建的时候设置颜色
+ *  导航栏背景颜色 默认白色
  */
-@property (nonatomic, strong)UIColor *barBackgroundColor;
+@property (nonatomic, strong)UIColor * _Nonnull barBackgroundColor;
 /**
- *  初始y字体颜色为白色 ，也可以自己创建设置自定义颜色
+ *  导航栏背文字颜色 默认黑色
  */
-@property (nonatomic, strong)UIColor *titleColor;
+@property (nonatomic, strong)UIColor * _Nonnull titleColor;
 /**
- * 导航栏背景图片
+ *  导航栏背文字大小 默认 加粗 15
  */
-@property (nonatomic, strong)UIImage *backimage;
+@property (nonatomic, strong)UIFont * _Nonnull font;
+/**
+ * 右边按钮图片
+ */
+@property (nonatomic, strong)UIImage * _Nonnull leftimage;
+/**
+ * 左边按钮图片
+ */
+@property (nonatomic, strong)UIImage * _Nonnull rightimage;
+
 @end
 
 
 @interface UIViewController (TFYNavigationContainer)
-
 /**
  返回控制器的导航栏,默认`TFYContainerNavigationController.class`
  
  你可以通过定义`kTFYNavigationControllerClassName`这个宏来返回默认的导航栏,
  子类也可以通过重写这个方法返回单独的导航栏,
  如果你自定义了导航栏之后,记得自己处理状态栏和屏幕旋转等问题
-
- @return 导航栏控制器类,必须是`UINavigationController`或其子类
+ 导航栏控制器类,必须是`UINavigationController`或其子类
  */
-- (Class)tfy_navigationControllerClass;
-
-/// Default is `nil`
-- (TFY_NavigationController *)tfy_rootNavigationController;
-
+- (Class _Nonnull )tfy_navigationControllerClass;
+// Default is `nil`
+- (TFY_NavigationController *_Nonnull)tfy_rootNavigationController;
+/**right 按钮点击回调*/
+@property (nonatomic, copy, nullable)void(^right_block)(void);
 @end

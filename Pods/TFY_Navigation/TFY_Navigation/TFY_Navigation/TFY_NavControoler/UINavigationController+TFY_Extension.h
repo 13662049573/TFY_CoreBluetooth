@@ -48,8 +48,11 @@
  */
 - (void)tfy_navigationBarOpaque;
 /**
- *  设置导航栏上滑收起,下滑显示(iOS8及以后有效)
+ *  当用户滑动时，导航控制器的导航栏和工具栏将被隐藏(向上滑动)或显示(向下滑动)。工具栏只有在拥有项时才参与。
  */
 - (void)tfy_hidesNavigationBarsOnSwipe;
-
+/**
+   当用户点击时，导航控制器的导航栏和工具栏将会隐藏或显示，这取决于导航栏的隐藏状态。工具栏只有在有要显示的项目时才会显示。
+ */
+- (void)tfy_hidesBarsOnTap;
 @end

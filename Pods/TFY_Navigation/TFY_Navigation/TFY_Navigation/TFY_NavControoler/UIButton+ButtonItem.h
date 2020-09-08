@@ -10,16 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ButtonImageDirection) {
-    ButtonImageDirectionTop,
-    ButtonImageDirectionLeft,
-    ButtonImageDirectionRight,
-    ButtonImageDirectionBottom,
+typedef NS_ENUM(NSInteger, NAV_ButtonImageDirection) {
+    NAV_ButtonImageDirectionTop,
+    NAV_ButtonImageDirectionLeft,
+    NAV_ButtonImageDirectionRight,
+    NAV_ButtonImageDirectionBottom,
 };
 
 @interface UIButton (ButtonItem)
 
-- (void)imageDirection:(ButtonImageDirection)direction space:(CGFloat)space;
+- (void)imageDirection:(NAV_ButtonImageDirection)direction space:(CGFloat)space;
 @end
 
 NS_ASSUME_NONNULL_END

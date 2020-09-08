@@ -37,7 +37,6 @@
     } else {
         [transitionContext.containerView insertSubview:toVC.view belowSubview:fromVC.view];
     }
-
     fromVC.view.alpha = 1;
     toVC.view.alpha = 0;
 
@@ -46,7 +45,6 @@
         toVC.view.alpha = 1;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
-
         fromVC.view.alpha = 1;
     }];
 

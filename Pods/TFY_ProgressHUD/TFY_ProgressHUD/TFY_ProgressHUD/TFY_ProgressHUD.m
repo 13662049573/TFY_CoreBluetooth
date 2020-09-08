@@ -133,7 +133,7 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
         }
         return _maskType == TFY_PopupMaskType_None ? nil : hitView;
     } else {
-        if ([hitView isDescendantOfView:_containerView] && _shouldDismissOnContentTouch) {
+        if ([hitView isDescendantOfView:_containerView] && _shouldDismissOnContentTouch) {//subview是否是superView的子视图
             [self dismissAnimated:YES];
         }
         return hitView;
@@ -409,14 +409,9 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
             __strong typeof(weakSelf) strongSelf = weakSelf;
             //准备弹出
             if (!strongSelf.superview) {
-                NSEnumerator *reverseWindows = [[[UIApplication sharedApplication] windows] reverseObjectEnumerator];
-                for (UIWindow *window in reverseWindows) {
-                    if (window.windowLevel == UIWindowLevelNormal) {
-                        [window addSubview:self];
-                        break;
-                    }
-                }
+                [[self lastWindow] addSubview:self];
             }
+            
             [strongSelf updateInterfaceOrientation];
             
             strongSelf.hidden = NO;
@@ -701,6 +696,24 @@ const TFY_PopupLayout TFY_PopupLayout_Center = { TFY_PopupHorizontalLayout_Cente
             }
         });
     }
+}
+
+- (UIWindow*)lastWindow {
+    NSEnumerator  *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
+    for (UIWindow *window in frontToBackWindows) {
+        BOOL windowOnMainScreen = window.screen == UIScreen.mainScreen;
+
+        BOOL windowIsVisible = !window.hidden&& window.alpha>0;
+
+        BOOL windowLevelSupported = (window.windowLevel >= UIWindowLevelNormal && window.windowLevel <= UIWindowLevelNormal);
+
+        BOOL windowKeyWindow = window.isKeyWindow;
+        
+        if (windowOnMainScreen && windowIsVisible && windowLevelSupported && windowKeyWindow) {
+            return window;
+        }
+    }
+    return [UIApplication sharedApplication].keyWindow;
 }
 
 - (void)dismiss:(BOOL)animated {

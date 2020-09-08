@@ -71,7 +71,7 @@ UIBarButtonItem *tfy_barbtnItem(void);
  *  文字--文字状态-文字颜色-文字大小  图片--图片UIImage--图片状态 direction 图片和字体距离，space 文字和图片间距  点击方法--方法状态
  *  tfy_barbtnItem().tfy_titleItembtn(CGSizeMake(100, 64), @"开始计时", [UIColor redColor], [UIFont boldSystemFontOfSize:14], [UIImage imageNamed:@"me_data_icom"], ButtonImageDirectionLeft, 2, self, @selector(imageClick), UIControlEventTouchUpInside);
  */
-@property(nonatomic,copy,readonly)UIBarButtonItem *(^tfy_titleItembtn)(CGSize size,NSString *title_str,id color,UIFont *font,NSString *image,ButtonImageDirection direction,CGFloat space,id object, SEL action,UIControlEvents evrnts);
+@property(nonatomic,copy,readonly)UIBarButtonItem *(^tfy_titleItembtn)(CGSize size,NSString *title_str,id color,UIFont *font,NSString *image,NAV_ButtonImageDirection direction,CGFloat space,id object, SEL action,UIControlEvents evrnts);
 
 @end
 

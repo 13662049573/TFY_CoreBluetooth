@@ -1,47 +1,72 @@
 PODS:
-  - TFY_AutoLayout (2.5.2):
-    - TFY_AutoLayout/IOS_Layout (= 2.5.2)
-    - TFY_AutoLayout/MAC_Layout (= 2.5.2)
-    - TFY_AutoLayout/Util (= 2.5.2)
-  - TFY_AutoLayout/IOS_Layout (2.5.2):
+  - TFY_AutoLayout (2.6.2):
+    - TFY_AutoLayout/IOS_Layout (= 2.6.2)
+    - TFY_AutoLayout/MAC_Layout (= 2.6.2)
+    - TFY_AutoLayout/Util (= 2.6.2)
+  - TFY_AutoLayout/IOS_Layout (2.6.2):
     - TFY_AutoLayout/Util
-  - TFY_AutoLayout/MAC_Layout (2.5.2):
+  - TFY_AutoLayout/MAC_Layout (2.6.2):
     - TFY_AutoLayout/Util
-  - TFY_AutoLayout/Util (2.5.2)
-  - TFY_Category (3.2.8):
-    - TFY_Category/TFY_Foundation (= 3.2.8)
-    - TFY_Category/TFY_ITools (= 3.2.8)
-    - TFY_Category/TFY_UI (= 3.2.8)
-  - TFY_Category/TFY_Foundation (3.2.8)
-  - TFY_Category/TFY_ITools (3.2.8)
-  - TFY_Category/TFY_UI (3.2.8)
-  - TFY_Navigation (2.2.2):
-    - TFY_Navigation/TFY_NavControoler (= 2.2.2)
-    - TFY_Navigation/TFY_PopController (= 2.2.2)
-  - TFY_Navigation/TFY_NavControoler (2.2.2):
+  - TFY_AutoLayout/Util (2.6.2)
+  - TFY_LayoutCategoryKit (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Categories (= 1.5.8)
+    - TFY_LayoutCategoryKit/TFY_Chain (= 1.5.8)
+    - TFY_LayoutCategoryKit/TFY_Tools (= 1.5.8)
+  - TFY_LayoutCategoryKit/TFY_Categories (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation (= 1.5.8)
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI (= 1.5.8)
+    - TFY_LayoutCategoryKit/TFY_Tools
+  - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Tools
+  - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Tools
+  - TFY_LayoutCategoryKit/TFY_Chain (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer (= 1.5.8)
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase (= 1.5.8)
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture (= 1.5.8)
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIView (= 1.5.8)
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase (1.5.8)
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIView (1.5.8):
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture
+  - TFY_LayoutCategoryKit/TFY_Tools (1.5.8)
+  - TFY_Navigation (2.4.2):
+    - TFY_Navigation/TFY_NavControoler (= 2.4.2)
+    - TFY_Navigation/TFY_PageController (= 2.4.2)
+    - TFY_Navigation/TFY_PopController (= 2.4.2)
+  - TFY_Navigation/TFY_NavControoler (2.4.2):
     - TFY_Navigation/TFY_PopController
-  - TFY_Navigation/TFY_PopController (2.2.2)
-  - TFY_ProgressHUD (2.3.9)
+  - TFY_Navigation/TFY_PageController (2.4.2)
+  - TFY_Navigation/TFY_PopController (2.4.2)
+  - TFY_ProgressHUD (2.4.0)
 
 DEPENDENCIES:
   - TFY_AutoLayout
-  - TFY_Category
+  - TFY_LayoutCategoryKit
   - TFY_Navigation
   - TFY_ProgressHUD
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - TFY_AutoLayout
-    - TFY_Category
+    - TFY_LayoutCategoryKit
     - TFY_Navigation
     - TFY_ProgressHUD
 
 SPEC CHECKSUMS:
-  TFY_AutoLayout: 792116abdb3fb2758c59d29ac16322bbfe8441ab
-  TFY_Category: 75797a0b1aa72794bd7b4258608af00007467453
-  TFY_Navigation: 3523efe2942ef7bede46223f5bb0553e8842096e
-  TFY_ProgressHUD: f0201d5f5be0784435e23d385687572ab16410a4
+  TFY_AutoLayout: 03085c3744020215142df50ee24e9629eb967779
+  TFY_LayoutCategoryKit: 5157ddb142edf3a92b5401dd3e3c4c15dd29ae3f
+  TFY_Navigation: 2c65cf8eb138a48af7b615f7f3ee0f71d2b8c83f
+  TFY_ProgressHUD: c50d5c947d185b30038c746eaae5c34e10564eb1
 
-PODFILE CHECKSUM: bf6fb11b114a3d16a6874d388f61c7799387e41e
+PODFILE CHECKSUM: 1c34b3d2090899c99b66918f71f29e6e05c48d31
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0.beta.2

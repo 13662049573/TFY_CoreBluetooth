@@ -322,12 +322,10 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(tfy_PopupMenu:cellForRowAtIndex:)]) {
         tableViewCell = [self.delegate tfy_PopupMenu:self cellForRowAtIndex:indexPath.row];
     }
-    
     if (tableViewCell) {
         return tableViewCell;
     }
-    
-    static NSString * identifier = @"TFY_PopupMenu";
+    NSString * identifier = [NSString stringWithFormat:@"%ld%ld",(long)indexPath.section,(long)indexPath.row];
     PopupMenuCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[PopupMenuCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
