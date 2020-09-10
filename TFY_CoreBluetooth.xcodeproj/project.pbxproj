@@ -118,11 +118,11 @@
 		36CB631D238FFB77005976FF /* TFY_EasyCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyCenterManager.h; sourceTree = "<group>"; };
 		36CB631E238FFB77005976FF /* TFY_EasyDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_EasyDescriptor.h; sourceTree = "<group>"; };
 		36CB631F238FFB77005976FF /* TFY_EasyBlueToothManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFY_EasyBlueToothManager.m; sourceTree = "<group>"; };
+		36EE10FD250A144500D24B3C /* TFY_EasyBlueTooth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_EasyBlueTooth.h; sourceTree = "<group>"; };
 		5657EA59233F56A9009BF1F3 /* TFY_BluePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFY_BluePrefixHeader.pch; sourceTree = "<group>"; };
 		5657EA5A233F59C6009BF1F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5657EA5C233F59D0009BF1F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5657EA5E233F64E1009BF1F3 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
-		565A15D6235E885600B36531 /* TFY_BlueHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFY_BlueHeader.h; sourceTree = "<group>"; };
 		565A15E1235E8C6800B36531 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		5680B1B0233E3B1C0081C5FA /* 蓝牙处理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "蓝牙处理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5680B1BF233E3B1E0081C5FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -297,7 +297,7 @@
 		565A15C3235E885600B36531 /* TFY_EasyBlueTooth */ = {
 			isa = PBXGroup;
 			children = (
-				565A15D6235E885600B36531 /* TFY_BlueHeader.h */,
+				36EE10FD250A144500D24B3C /* TFY_EasyBlueTooth.h */,
 				36CB6314238FFB76005976FF /* TFY_EasyBlueToothManager.h */,
 				36CB631F238FFB77005976FF /* TFY_EasyBlueToothManager.m */,
 				36CB631D238FFB77005976FF /* TFY_EasyCenterManager.h */,
