@@ -3,7 +3,7 @@
 Pod::Spec.new do |spec|
   spec.name         = "TFY_EasyBlueTooth"
 
-  spec.version      = "2.1.4"
+  spec.version      = "2.1.6"
   
   spec.summary      = "蓝牙封装适合各种设备使用"
 
@@ -19,7 +19,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/13662049573/TFY_CoreBluetooth.git", :tag => spec.version }
 
-  spec.source_files  = "TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_BlueHeader.h","TFY_CoreBluetooth/TFY_EasyBlueTooth/**/*.{h,m}"
+  spec.source_files  = "TFY_CoreBluetooth/TFY_EasyBlueTooth/**/*.{h,m}"
 
   spec.frameworks    = "Foundation","UIKit"
 
