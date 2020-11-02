@@ -1,1 +1,0 @@
-../../../TFY_Navigation/TFY_Navigation/TFY_Navigation/TFY_PopController/TFY_NavAnimatedTransitioning 2.h
