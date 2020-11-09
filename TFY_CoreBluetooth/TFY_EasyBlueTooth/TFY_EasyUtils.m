@@ -391,7 +391,7 @@ static const double reserved_float_values[5] = {INFINITY, NAN, NAN, NAN, -INFINI
     NSString *binary = @"";
     while (decimal) {
         
-        binary = [[NSString stringWithFormat:@"%d", decimal % 2] stringByAppendingString:binary];
+        binary = [[NSString stringWithFormat:@"%ld", decimal % 2] stringByAppendingString:binary];
         if (decimal / 2 < 1) {
             
             break;

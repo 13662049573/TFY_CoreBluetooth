@@ -95,58 +95,6 @@ const char* jailbreak_tool_pathes[] = {
     "/etc/apt"
 };
 
-#pragma mark------------------------------------------gcd定时器方法---------------------------------------
-
-- (instancetype)initWithInterval:(NSTimeInterval)interval repeats:(BOOL)repeats queue:(dispatch_queue_t)queue block:(void (^)(void))block {
-    self = [super init];
-    if (self) {
-        self.timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-        dispatch_source_set_timer(self.timer, dispatch_time(DISPATCH_TIME_NOW, interval * NSEC_PER_SEC), interval * NSEC_PER_SEC, 0);
-        dispatch_source_set_event_handler(self.timer, ^{
-            if (!repeats) {
-                dispatch_source_cancel(self.timer);
-            }
-            block();
-        });
-        dispatch_resume(self.timer);
-    }
-    return self;
-}
-
-- (void)dealloc {
-    [self cancel];
-    
-    [self stopNotifier];
-    if (_reachabilityRef != NULL)
-    {
-        CFRelease(_reachabilityRef);
-    }
-}
-
-//暂停
-- (void)pause{
-    if (self.timer) {
-        dispatch_suspend(self.timer);
-    }
-}
-//继续
-- (void)resume{
-    if (self.timer) {
-        dispatch_resume(self.timer);
-    }
-}
-//启动
-- (void)start{
-    [self resume];
-}
-//销毁
-- (void)cancel {
-    if (self.timer) {
-        dispatch_source_cancel(self.timer);
-    }
-}
-
-
 #pragma mark------------------------------------------手机获取网络监听方法---------------------------------------
 
 + (instancetype)reachabilityWithHostName:(NSString *)hostName{
@@ -629,24 +577,6 @@ const char* jailbreak_tool_pathes[] = {
         languageCode = @"en";//英语
     }
     [self setLanguage:languageCode];
-}
-
-- (UIWindow*)lastWindow {
-    NSEnumerator  *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
-    for (UIWindow *window in frontToBackWindows) {
-        BOOL windowOnMainScreen = window.screen == UIScreen.mainScreen;
-
-        BOOL windowIsVisible = !window.hidden&& window.alpha>0;
-
-        BOOL windowLevelSupported = (window.windowLevel >= UIWindowLevelNormal && window.windowLevel <= UIWindowLevelNormal);
-
-        BOOL windowKeyWindow = window.isKeyWindow;
-        
-        if (windowOnMainScreen && windowIsVisible && windowLevelSupported && windowKeyWindow) {
-            return window;
-        }
-    }
-    return [UIApplication sharedApplication].keyWindow;
 }
 
 #pragma mark------------------------------------------国际化设置---------------------------------------
