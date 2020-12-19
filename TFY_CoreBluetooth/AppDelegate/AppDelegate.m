@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,27 +17,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-
+    if (![ScenePackage defaultPackage].isSceneApp) {
+        self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        self.window.backgroundColor = [UIColor whiteColor];
+        [self.window makeKeyAndVisible];
+    }
+    [[ScenePackage defaultPackage] addBeforeWindowEvent:^(ScenePackage * _Nonnull application) {
+        TFY_NavigationController *nav = [[TFY_NavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+        [UIApplication window].rootViewController = nav;
+    }];
     return YES;
 }
-
-
-#pragma mark - UISceneSession lifecycle
-
-
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options  API_AVAILABLE(ios(13.0)){
-    //在创建新的场景会话时调用。
-   //使用此方法选择用于创建新场景的配置。
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
-}
-
-
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions  API_AVAILABLE(ios(13.0)){
-    //当用户放弃场景会话时调用。
-    //如果在应用程序未运行时丢弃了任何会话，则会在application：didFinishLaunchingWithOptions之后不久调用此方法。
-    //使用此方法释放特定于被丢弃场景的任何资源，因为它们不会返回。
-}
-
 
 @end
