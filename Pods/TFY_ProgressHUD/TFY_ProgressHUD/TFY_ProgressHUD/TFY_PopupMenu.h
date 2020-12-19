@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-// 过期提醒
-#define Deprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -256,11 +254,7 @@ typedef NS_ENUM(NSInteger , PopupMenuPriorityDirection) {
  *  itemWidth 菜单宽度
  *  delegate  代理
  */
-+ (TFY_PopupMenu *)showAtPoint:(CGPoint)point
-                     titles:(NSArray *)titles
-                      icons:(NSArray *)icons
-                  menuWidth:(CGFloat)itemWidth
-                   delegate:(id<PopupMenuDelegate>)delegate;
++ (TFY_PopupMenu *)showAtPoint:(CGPoint)point titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth delegate:(id<PopupMenuDelegate>)delegate;
 
 /**
  * 在指定位置弹出(推荐方法)
@@ -270,11 +264,7 @@ typedef NS_ENUM(NSInteger , PopupMenuPriorityDirection) {
  * itemWidth      菜单宽度
  * otherSetting   其他设置
  */
-+ (TFY_PopupMenu *)showAtPoint:(CGPoint)point
-                      titles:(NSArray *)titles
-                       icons:(NSArray *)icons
-                   menuWidth:(CGFloat)itemWidth
-               otherSettings:(void (^) (TFY_PopupMenu * popupMenu))otherSetting;
++ (TFY_PopupMenu *)showAtPoint:(CGPoint)point titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth otherSettings:(void (^) (TFY_PopupMenu * popupMenu))otherSetting;
 
 /**
  * 依赖指定view弹出
@@ -283,11 +273,7 @@ typedef NS_ENUM(NSInteger , PopupMenuPriorityDirection) {
  * itemWidth 菜单宽度
  * delegate  代理
  */
-+ (TFY_PopupMenu *)showRelyOnView:(UIView *)view
-                        titles:(NSArray *)titles
-                         icons:(NSArray *)icons
-                     menuWidth:(CGFloat)itemWidth
-                      delegate:(id<PopupMenuDelegate>)delegate;
++ (TFY_PopupMenu *)showRelyOnView:(UIView *)view titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth delegate:(id<PopupMenuDelegate>)delegate;
 
 /**
  * 依赖指定view弹出(推荐方法)
@@ -296,11 +282,7 @@ typedef NS_ENUM(NSInteger , PopupMenuPriorityDirection) {
  *  itemWidth      菜单宽度
  *  otherSetting   其他设置
  */
-+ (TFY_PopupMenu *)showRelyOnView:(UIView *)view
-                         titles:(NSArray *)titles
-                          icons:(NSArray *)icons
-                      menuWidth:(CGFloat)itemWidth
-                  otherSettings:(void (^) (TFY_PopupMenu * popupMenu))otherSetting;
++ (TFY_PopupMenu *)showRelyOnView:(UIView *)view titles:(NSArray *)titles icons:(NSArray *)icons menuWidth:(CGFloat)itemWidth otherSettings:(void (^) (TFY_PopupMenu * popupMenu))otherSetting;
 
 /**
  消失

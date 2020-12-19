@@ -137,8 +137,7 @@ static const double reserved_float_values[5] = {INFINITY, NAN, NAN, NAN, -INFINI
 }
 
 //10进制转16进制
-+(NSString *)ToHex:(long long int)tmpid
-{
++(NSString *)ToHex:(long long int)tmpid{
     NSString *nLetterValue;
     NSString *str =@"";
     long long int ttmpig;
@@ -438,13 +437,13 @@ static const double reserved_float_values[5] = {INFINITY, NAN, NAN, NAN, -INFINI
             case 15:
                 letter =@"F"; break;
             default:
-                letter = [NSString stringWithFormat:@"%ld", number];
+                letter = [NSString stringWithFormat:@"%ld", (long)number];
         }
         hex = [letter stringByAppendingString:hex];
-        if (decimal == 0) {
-            
-            break;
-        }
+        if (decimal == 0) {break;}
+    }
+    if (hex.length==1) {
+        hex = [NSString stringWithFormat:@"0%@",hex];
     }
     return hex;
 }

@@ -1,12 +1,14 @@
-source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios,'10.0'
-inhibit_all_warnings!
-target 'TFY_CoreBluetooth' do
 
-pod 'TFY_Category'
+inhibit_all_warnings!
+
+target 'TFY_CoreBluetooth' do
+  
+pod 'TFY_LayoutCategoryKit'
 pod 'TFY_ProgressHUD'
 pod 'TFY_Navigation'
 pod 'TFY_AutoLayout'
+pod 'TFY_TabBarKit'
 
 end
