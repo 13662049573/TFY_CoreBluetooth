@@ -65,6 +65,7 @@
         vc.view.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.f
                                                   green:arc4random()%255/255.f
                                                    blue:arc4random()%255/255.f alpha:1];
+        vc.title = [obj objectForKey:@"itemTitle"];
         // 5.将VC添加到系统控制组
         TFY_NavigationController *nav = [[TFY_NavigationController alloc] initWithRootViewController:vc];
         [tabBarVCs addObject:nav];
@@ -75,6 +76,7 @@
     self.ControllerArray = tabBarVCs;
     self.tfySY_TabBar = [[TfySY_TabBar alloc] initWithTabBarConfig:tabBarConfs];
     self.tfySY_TabBar.delegate = self;
+    self.tfySY_TabBar.backgroundColor = UIColor.greenColor;
     [self.tabBar addSubview:self.tfySY_TabBar];
     
 }
