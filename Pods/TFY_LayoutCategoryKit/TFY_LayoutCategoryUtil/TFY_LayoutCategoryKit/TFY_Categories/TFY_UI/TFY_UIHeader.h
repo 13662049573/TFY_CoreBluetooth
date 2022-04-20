@@ -24,5 +24,9 @@
 #import "CALayer+TFY_Tools.h"
 #import "UIColor+iOS13DarkMode.h"
 #import "UIImage+iOS13DarkMode.h"
+#import "UIView+EdgeAnimation.h" //给边际添加圆弧
+#import "UITableView+CornerRadius.h"
+#import "UIView+Gradient.h"
+#import "UIImage+Addtions.h"
 
 #endif /* TFY_UIHeader_h */

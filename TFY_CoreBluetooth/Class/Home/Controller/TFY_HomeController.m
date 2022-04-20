@@ -30,6 +30,7 @@ TFY_PROPERTY_NSMutableArray(dataArray);
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.title = @"蓝牙列表";
     [self.view addSubview:self.tableView];
     [self.tableView tfy_AutoSize:0 top:0 right:0 bottom:0];
@@ -84,12 +85,13 @@ TFY_PROPERTY_NSMutableArray(dataArray);
     TFY_WEAK;
     TFY_EasyPeripheral *peripheral = self.dataArray[indexPath.row];
     if (peripheral.state == CBPeripheralStateConnected) {
+        
         TFY_DetailViewController *tooD = [[TFY_DetailViewController alloc]init];
         tooD.peripheral = peripheral ;
         tooD.hidesBottomBarWhenPushed = YES;
         [weakSelf.navigationController pushViewController:tooD animated:YES];
-    }
-    else{
+        
+    } else {
         [TFY_ProgressHUD showWithStatus:@"正在连接设备..."];
         [peripheral connectDeviceWithCallback:^(TFY_EasyPeripheral *perpheral, NSError *error, deviceConnectType deviceConnectType) {
             [TFY_ProgressHUD dismissAllPopups];
@@ -144,6 +146,7 @@ TFY_PROPERTY_NSMutableArray(dataArray);
     }).tfy_showFromViewController(self);
     Blue_queueEnd
 }
+
 - (void)deviceConnect:(TFY_EasyPeripheral *)peripheral error:(NSError *)error {
     Blue_queueMainStart
     [TFY_ProgressHUD dismiss];

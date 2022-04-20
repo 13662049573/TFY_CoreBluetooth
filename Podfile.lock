@@ -8,58 +8,51 @@ PODS:
   - TFY_AutoLayout/MAC_Layout (2.6.4):
     - TFY_AutoLayout/Util
   - TFY_AutoLayout/Util (2.6.4)
-  - TFY_LayoutCategoryKit (1.6.8):
-    - TFY_LayoutCategoryKit/TFY_Categories (= 1.6.8)
-    - TFY_LayoutCategoryKit/TFY_Chain (= 1.6.8)
-    - TFY_LayoutCategoryKit/TFY_Tools (= 1.6.8)
-  - TFY_LayoutCategoryKit/TFY_Categories (1.6.8):
-    - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation (= 1.6.8)
-    - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI (= 1.6.8)
+  - TFY_LayoutCategoryKit (2.5.1):
+    - TFY_LayoutCategoryKit/TFY_Categories (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Chain (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Tools (= 2.5.1)
+  - TFY_LayoutCategoryKit/TFY_Categories (2.5.1):
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_BadgeView (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_TextKit (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI (= 2.5.1)
     - TFY_LayoutCategoryKit/TFY_Tools
-  - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation (1.6.8):
+  - TFY_LayoutCategoryKit/TFY_Categories/TFY_BadgeView (2.5.1):
     - TFY_LayoutCategoryKit/TFY_Tools
-  - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI (1.6.8):
+  - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation (2.5.1):
     - TFY_LayoutCategoryKit/TFY_Tools
-  - TFY_LayoutCategoryKit/TFY_Chain (1.6.8):
-    - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer (= 1.6.8)
-    - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase (= 1.6.8)
-    - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture (= 1.6.8)
-    - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIView (= 1.6.8)
-  - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer (1.6.8):
+  - TFY_LayoutCategoryKit/TFY_Categories/TFY_TextKit (2.5.1):
+    - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation
+    - TFY_LayoutCategoryKit/TFY_Tools
+  - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI (2.5.1):
+    - TFY_LayoutCategoryKit/TFY_Tools
+  - TFY_LayoutCategoryKit/TFY_Chain (2.5.1):
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture (= 2.5.1)
+    - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIView (= 2.5.1)
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer (2.5.1):
     - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI
     - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase
-  - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase (1.6.8)
-  - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture (1.6.8):
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase (2.5.1)
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture (2.5.1):
     - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI
     - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase
-  - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIView (1.6.8):
+  - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIView (2.5.1):
     - TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation
     - TFY_LayoutCategoryKit/TFY_Categories/TFY_UI
     - TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer
     - TFY_LayoutCategoryKit/TFY_Chain/TFY_ChainBase
     - TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture
-  - TFY_LayoutCategoryKit/TFY_Tools (1.6.8)
-  - TFY_Navigation (2.6.4):
-    - TFY_Navigation/TFY_NavControoler (= 2.6.4)
-    - TFY_Navigation/TFY_PageController (= 2.6.4)
-  - TFY_Navigation/TFY_NavControoler (2.6.4):
-    - TFY_Navigation/TFY_NavControoler/TFY_Category (= 2.6.4)
-    - TFY_Navigation/TFY_NavControoler/TFY_Configure (= 2.6.4)
-    - TFY_Navigation/TFY_NavControoler/TFY_NavBasVcKit (= 2.6.4)
-    - TFY_Navigation/TFY_NavControoler/TFY_NavigationKit (= 2.6.4)
-  - TFY_Navigation/TFY_NavControoler/TFY_Category (2.6.4):
-    - TFY_Navigation/TFY_NavControoler/TFY_Configure
-  - TFY_Navigation/TFY_NavControoler/TFY_Configure (2.6.4)
-  - TFY_Navigation/TFY_NavControoler/TFY_NavBasVcKit (2.6.4):
-    - TFY_Navigation/TFY_NavControoler/TFY_Category
-    - TFY_Navigation/TFY_NavControoler/TFY_Configure
-  - TFY_Navigation/TFY_NavControoler/TFY_NavigationKit (2.6.4):
-    - TFY_Navigation/TFY_NavControoler/TFY_Configure
-  - TFY_Navigation/TFY_PageController (2.6.4)
-  - TFY_ProgressHUD (2.4.4)
-  - TFY_TabBarKit (1.1.2):
-    - TFY_TabBarKit/TFY_SystemTabBar (= 1.1.2)
-  - TFY_TabBarKit/TFY_SystemTabBar (1.1.2)
+  - TFY_LayoutCategoryKit/TFY_Tools (2.5.1)
+  - TFY_Navigation (2.9.1):
+    - TFY_Navigation/TFY_NavControoler (= 2.9.1)
+  - TFY_Navigation/TFY_NavControoler (2.9.1)
+  - TFY_ProgressHUD (2.4.8)
+  - TFY_TabBarKit (1.1.6):
+    - TFY_TabBarKit/TFY_SystemTabBar (= 1.1.6)
+  - TFY_TabBarKit/TFY_SystemTabBar (1.1.6)
 
 DEPENDENCIES:
   - TFY_AutoLayout
@@ -78,11 +71,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   TFY_AutoLayout: 51019bdcdb78b9a145bd0ed351d23be93379dc0b
-  TFY_LayoutCategoryKit: 1114d02981a898cfce539698236702bef66d33ee
-  TFY_Navigation: 9d9bf5a9ced9d7be01a8b99d63066b12731351cb
-  TFY_ProgressHUD: 56e59fdf0f932267246a5d0fe316d6511684f0a4
-  TFY_TabBarKit: 03da94084ad16fa462aba0b4591d984b516085c1
+  TFY_LayoutCategoryKit: 0323091f5a7c2433b0cf1d6038d915a04ed0dd59
+  TFY_Navigation: c767fc6a1ed6cff83b88c41d7d077f47777c6c41
+  TFY_ProgressHUD: cd69a1005edd6c9527c7c4dfa8df09c1f09c3006
+  TFY_TabBarKit: 2a96e8283d76da957d17d4c473b21e8b5a005805
 
-PODFILE CHECKSUM: 9829d162fb2a16167a829d2b9f6d4c1efe15a39f
+PODFILE CHECKSUM: 8e672fce6943295f1567218300a7a820e08af8c6
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.3

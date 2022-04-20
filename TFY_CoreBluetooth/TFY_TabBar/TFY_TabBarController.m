@@ -9,6 +9,7 @@
 #import "TFY_TabBarController.h"
 #import "TFY_HomeController.h"
 #import "TFY_MineController.h"
+#import "TFY_SubjectController.h"
 
 @interface TFY_TabBarController ()<TfySY_TabBarDelegate>
 
@@ -18,15 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 去掉顶部的黑线
+    self.tabBar.backgroundImage = [UIImage tfy_createImage:UIColor.clearColor];
+    [self.tabBar setShadowImage:[UIImage tfy_createImage:UIColor.clearColor]];
+    
     [self addChildViewControllers];
 }
-- (void)addChildViewControllers{
+
+- (void)addChildViewControllers {
+    
     NSArray <NSDictionary *>*VCArray =
     @[@{@"vc":[TFY_HomeController new],@"normalImg":@"icon_tabbar_home_no",@"selectImg":@"icon_tabbar_home",@"itemTitle":@"发现"},
-      @{@"vc":[UIViewController new],@"normalImg":@"icon_tabbar_subscription_no",@"selectImg":@"icon_tabbar_subscription",@"itemTitle":@"关注"},
+      @{@"vc":[TFY_SubjectController new],@"normalImg":@"icon_tabbar_subscription_no",@"selectImg":@"icon_tabbar_subscription",@"itemTitle":@"关注"},
       @{@"vc":[UIViewController new],@"normalImg":@"",@"selectImg":@"",@"itemTitle":@" "},
       @{@"vc":[UIViewController new],@"normalImg":@"icon_tabbar_notification_no",@"selectImg":@"icon_tabbar_notification",@"itemTitle":@"消息"},
       @{@"vc":[TFY_MineController new],@"normalImg":@"icon_tabbar_me_no",@"selectImg":@"icon_tabbar_me",@"itemTitle":@"我的"}];
+    
     NSMutableArray *tabBarConfs = @[].mutableCopy;
     NSMutableArray *tabBarVCs = @[].mutableCopy;
     [VCArray enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -73,10 +82,9 @@
 static NSInteger lastIdx = 0;
 - (void)TfySY_TabBar:(TfySY_TabBar *)tabbar selectIndex:(NSInteger)index{
     if (index != 2) { // 不是中间的就切换
-        // 通知 切换视图控制器
-        [self setSelectedIndex:index];
+        [self setSelectedIndex:index]; // 通知 切换视图控制器
         lastIdx = index;
-    }else{ // 点击了中间的
+    } else { // 点击了中间的
         [self.tfySY_TabBar setSelectIndex:lastIdx WithAnimation:NO]; // 换回上一个选中状态
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"点击了中间的,不切换视图"
                                                                           preferredStyle:UIAlertControllerStyleAlert];

@@ -30,10 +30,11 @@ TFY_PROPERTY_ASSIGN __block BOOL isShowfirstSection;//第一行是否打开
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.title = @"蓝牙详情";
     self.exitBreakUp = YES;
     //
-    self.navigationItem.rightBarButtonItem = tfy_barbtnItem().tfy_titleItem(@"退出断开连接",14,[UIColor redColor],self,@selector(barbuttonClick:));
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"退出断开连接" style:UIBarButtonItemStylePlain target:self action:@selector(barbuttonClick:)];
     
     self.advertisementArray = [self.peripheral.advertisementData allKeys];
     
