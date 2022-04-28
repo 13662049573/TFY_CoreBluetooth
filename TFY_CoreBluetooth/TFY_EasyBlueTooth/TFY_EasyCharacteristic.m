@@ -283,14 +283,14 @@
 }
 
 
-- (NSMutableArray *)readDataArray
+- (NSMutableArray<NSData *> *)readDataArray
 {
     if ( nil == _readDataArray) {
         _readDataArray = [NSMutableArray arrayWithCapacity:kARRAYMAXCOUNT];
     }
     return _readDataArray ;
 }
-- (NSMutableArray *)writeDataArray
+- (NSMutableArray<NSData *> *)writeDataArray
 {
     if (nil == _writeDataArray) {
         _writeDataArray = [NSMutableArray arrayWithCapacity:kARRAYMAXCOUNT];
@@ -298,7 +298,7 @@
     return _writeDataArray ;
 }
 
-- (NSMutableArray *)notifyDataArray
+- (NSMutableArray<NSData *> *)notifyDataArray
 {
     if (nil == _notifyDataArray) {
         _notifyDataArray = [NSMutableArray arrayWithCapacity:kARRAYMAXCOUNT];

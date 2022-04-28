@@ -91,13 +91,13 @@ TFY_PROPERTY_OBJECT_STRONG(UITextField, currentField);
             }
         }else{
             if ([tempString isEqualToString:@"Write"] ||[tempString isEqualToString:@"WithoutResponse"]) {
-                cell.title = self.characteristic.writeDataArray[indexPath.row-1] ;
+                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic.writeDataArray[indexPath.row-1]];
             }
             else if ([tempString isEqualToString:@"Read"]){
-                cell.title = self.characteristic.readDataArray[indexPath.row-1] ;
+                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic.readDataArray[indexPath.row-1]];
             }
             else if ([tempString isEqualToString:@"Notify"]||[tempString isEqualToString:@"Indicate"]){
-                cell.title = self.characteristic.notifyDataArray[indexPath.row-1] ;
+                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic.notifyDataArray[indexPath.row-1]];
             }
             
         }

@@ -25,7 +25,7 @@
         self.view.backgroundColor = [UIColor whiteColor];
         
         self.bleManager.bluetoothStateChanged = ^(TFY_EasyPeripheral *peripheral, bluetoothState state) {
-            NSLog(@" ====== %lu ", (unsigned long)state);
+           
         } ;
     
         Byte bytes[6]= {0xfe ,0x81,0x00,0x00,0x00,0x01};
