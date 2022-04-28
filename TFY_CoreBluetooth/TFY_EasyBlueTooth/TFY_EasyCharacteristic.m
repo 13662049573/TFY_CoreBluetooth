@@ -25,9 +25,9 @@
     
 }
 
-@property (nonatomic, strong) NSMutableArray *readDataArray ;
-@property (nonatomic, strong) NSMutableArray *writeDataArray ;
-@property (nonatomic, strong) NSMutableArray *notifyDataArray ;
+@property (nonatomic, strong) NSMutableArray<NSData *> *readDataArray ;
+@property (nonatomic, strong) NSMutableArray<NSData *> *writeDataArray ;
+@property (nonatomic, strong) NSMutableArray<NSData *> *notifyDataArray ;
 
 @property (nonatomic,strong)NSMutableArray<blueToothCharactersticOperateCallback> *readCallbackArray ;
 @property (nonatomic,strong)NSMutableArray<blueToothCharactersticOperateCallback> *writeCallbackArray ;

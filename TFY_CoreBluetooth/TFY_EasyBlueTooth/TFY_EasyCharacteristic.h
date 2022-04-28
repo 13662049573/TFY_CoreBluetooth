@@ -83,9 +83,9 @@ typedef void (^blueToothFindDescriptorCallback)(NSArray<TFY_EasyDescriptor *> *d
 /**
  * 接收到的数据都在这个数组里面，记录最后5次的操作
  */
-@property (nonatomic, strong, readonly) NSMutableArray *readDataArray ;
-@property (nonatomic, strong, readonly) NSMutableArray *writeDataArray ;
-@property (nonatomic, strong, readonly) NSMutableArray *notifyDataArray ;
+@property (nonatomic, strong, readonly) NSMutableArray<NSData *> *readDataArray ;
+@property (nonatomic, strong, readonly) NSMutableArray<NSData *> *writeDataArray ;
+@property (nonatomic, strong, readonly) NSMutableArray<NSData *> *notifyDataArray ;
 
 /**
  * 初始化方法

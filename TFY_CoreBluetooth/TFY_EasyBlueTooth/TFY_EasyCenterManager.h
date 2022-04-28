@@ -90,8 +90,8 @@ typedef void (^blueToothStateChangedCallback)(TFY_EasyCenterManager *manager , C
                           callBack:(blueToothSearchDeviceCallback)searchDeviceCallBack  ;
 
 - (void)scanDeviceWithTimeInterval:(NSTimeInterval)timeInterval
-                          services:(NSArray *)service
-                           options:(NSDictionary *)options
+                          services:(NSArray<CBUUID *> *)service
+                           options:(NSDictionary<NSString *, id>  *)options
                           callBack:(blueToothSearchDeviceCallback)searchDeviceCallBack ;
 
 
@@ -121,8 +121,8 @@ typedef void (^blueToothStateChangedCallback)(TFY_EasyCenterManager *manager , C
 /**
  * 回去已经连接上的设备
  */
-- (NSArray *)retrievePeripheralsWithIdentifiers:(NSArray *)identifiers;
-- (NSArray *)retrieveConnectedPeripheralsWithServices:(NSArray *)serviceUUIDS;
+- (NSArray<TFY_EasyPeripheral *> *)retrievePeripheralsWithIdentifiers:(NSArray<NSUUID *> *)identifiers;
+- (NSArray<TFY_EasyPeripheral *> *)retrieveConnectedPeripheralsWithServices:(NSArray<CBUUID *> *)serviceUUIDS;
 
 /**
  * 一段时间没有扫描到设备，通知外部处理

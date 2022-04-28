@@ -137,13 +137,6 @@
                         callback:(blueToothConnectDeviceCallback)callback
 {
 
-//    if (disconnectCallback) {
-//        _disconnectCallback = [disconnectCallback copy];
-//    }
-//    else{
-//        EasyLog(@"attention ! disconnectCallback is very importent , you should handle this callback");
-//    }
-    
     NSAssert(callback, @"您应该处理连接设备回调！");
 
     if (callback) {

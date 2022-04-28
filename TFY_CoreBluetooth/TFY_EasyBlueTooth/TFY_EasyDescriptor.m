@@ -17,7 +17,7 @@
     blueToothDescriptorOperateCallback _writeCallback ;
 }
 
-@property (nonatomic,strong)NSMutableArray *readCallbackArray ;
+@property (nonatomic,strong)NSMutableArray<NSData *> *readCallbackArray ;
 @end
 
 @implementation TFY_EasyDescriptor
@@ -98,14 +98,14 @@
 }
 
 
-- (NSMutableArray *)readDataArray
+- (NSMutableArray<NSData *> *)readDataArray
 {
     if ( nil == _readDataArray) {
         _readDataArray = [NSMutableArray arrayWithCapacity:10];
     }
     return _readDataArray ;
 }
-- (NSMutableArray *)writeDataArray
+- (NSMutableArray<NSData *> *)writeDataArray
 {
     if (nil == _writeDataArray) {
         _writeDataArray = [NSMutableArray arrayWithCapacity:10];
@@ -113,7 +113,7 @@
     return _writeDataArray ;
 }
 
-- (NSMutableArray *)readCallbackArray
+- (NSMutableArray<NSData *> *)readCallbackArray
 {
     if (nil == _readCallbackArray) {
         _readCallbackArray = [NSMutableArray arrayWithCapacity:5];

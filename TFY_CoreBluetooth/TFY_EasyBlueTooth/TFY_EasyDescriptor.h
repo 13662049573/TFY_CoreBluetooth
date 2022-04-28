@@ -47,8 +47,8 @@ typedef void (^blueToothDescriptorOperateCallback)(TFY_EasyDescriptor *descripto
 /**
  * 描述上读写操作的记录值
  */
-@property (nonatomic,strong)NSMutableArray *readDataArray ;
-@property (nonatomic,strong)NSMutableArray *writeDataArray ;
+@property (nonatomic,strong)NSMutableArray<NSData *> *readDataArray ;
+@property (nonatomic,strong)NSMutableArray<NSData *> *writeDataArray ;
 
 /**
  * 初始化方法

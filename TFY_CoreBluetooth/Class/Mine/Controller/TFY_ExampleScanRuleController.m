@@ -26,6 +26,7 @@
     // Do any additional setup after loading the view.
     
     [TFY_ProgressHUD showPromptWithStatus:@"正在扫描设备" duration:3];
+    
     [self.bleManager scanAllDeviceAsyncWithRule:^BOOL(TFY_EasyPeripheral *peripheral) {
         
         NSLog(@"%@ == %@ == %@",peripheral.advertisementData.allValues,peripheral.name,peripheral.RSSI) ;

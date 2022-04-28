@@ -91,13 +91,13 @@ TFY_PROPERTY_OBJECT_STRONG(UITableView, tableView);
 - (TFY_EasyBlueToothManager *)bleManager {
     if (!_bleManager) {
         _bleManager = [TFY_EasyBlueToothManager shareInstance];
-        CBUUID *dfuServiceUUID = [CBUUID UUIDWithString:@"0000FC00-0000-1000-8000-00805F9B34FB"];
+        CBUUID *dfuServiceUUID = [CBUUID UUIDWithString:@"08AA381C-5777-F298-8747-7BA47F4B3673"];
         dispatch_queue_t queue = dispatch_queue_create("tfy.TFY-CoreBluetooth", 0);
         NSDictionary *managerDict = @{CBCentralManagerOptionShowPowerAlertKey:@YES};
         NSDictionary *scanDict = @{CBCentralManagerScanOptionAllowDuplicatesKey: @YES };
         NSDictionary *connectDict = @{CBConnectPeripheralOptionNotifyOnConnectionKey:@YES,CBConnectPeripheralOptionNotifyOnDisconnectionKey:@YES,CBConnectPeripheralOptionNotifyOnNotificationKey:@YES};
         
-        TFY_EasyManagerOptions *options = [[TFY_EasyManagerOptions alloc]initWithManagerQueue:queue managerDictionary:managerDict scanOptions:scanDict scanServiceArray:@[dfuServiceUUID] connectOptions:connectDict];
+        TFY_EasyManagerOptions *options = [[TFY_EasyManagerOptions alloc]initWithManagerQueue:queue managerDictionary:managerDict scanOptions:scanDict scanServiceArray:@[] connectOptions:connectDict];
         options.scanTimeOut = 6 ;
         options.connectTimeOut = 5 ;
         options.autoConnectAfterDisconnect = YES ;

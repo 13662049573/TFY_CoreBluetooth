@@ -8,6 +8,11 @@
 
 #import "TFY_ExampleScanNameController.h"
 
+#define UUID_SERVICE @"0000FFF0-0000-1000-8000-00805F9B34FB"
+#define UUID_WRITE @"0000FFF1-0000-1000-8000-00805F9B34FB"
+#define UUID_NOTIFICATION @"0000FFF1-0000-1000-8000-00805F9B34FB"
+#define CCCD_READ @"00002902-0000-1000-8000-00805f9b34fb"
+
 @interface TFY_ExampleScanNameController ()
 TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
 @end
@@ -37,7 +42,7 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
     };
     [TFY_ProgressHUD showWithStatus:@"正在扫描并连接设别..."];
     TFY_WEAK;
-    [self.bleManager scanAndConnectDeviceWithName:@"LMLady-BBT" callback:^(TFY_EasyPeripheral *peripheral, NSError *error) {
+    [self.bleManager scanAndConnectDeviceWithName:@"HS_BLE" callback:^(TFY_EasyPeripheral *peripheral, NSError *error) {
         if (!error) {
             weakSelf.peripheral = peripheral ;
             
@@ -62,35 +67,35 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
 {
     NSData *data;
     if (btn.tag==10) {
-           data = [TFY_EasyUtils convertHexStrToData:@"FA0312040E08002F"];//FA 03 12 04 0E 08 00 2F
+           data = [TFY_EasyUtils convertHexStrToData:@"22HY63475E15"];//FA 03 12 04 0E 08 00 2F
         [self hhhhhhdata:data];
     }
     if (btn.tag==11) {
-         data = [TFY_EasyUtils convertHexStrToData:@"FA04000000000004"];//
+         data = [TFY_EasyUtils convertHexStrToData:@"22HY63475E15"];//
         [self hhhhhhdata:data];
     }
     if (btn.tag==12) {
-        data = [TFY_EasyUtils convertHexStrToData:@"FA0A00000000000A"];
+        data = [TFY_EasyUtils convertHexStrToData:@"22HY63475E15"];
         NSLog(@"===========================%@",[TFY_EasyUtils convertDataToHexStr:data]);
         [self hhhhhhdata:data];
     }
     if (btn.tag==13) {
-        data = [TFY_EasyUtils convertHexStrToData:@"FA08000000000008"];//
+        data = [TFY_EasyUtils convertHexStrToData:@"22HY63475E15"];//
         [self hhhhhhdata:data];
     }
     if (btn.tag==14) {
-        data = [TFY_EasyUtils convertHexStrToData:@"FA09000000000009"];//
+        data = [TFY_EasyUtils convertHexStrToData:@"22HY63475E15"];//
         [self hhhhhhdata:data];
     }
     if (btn.tag==15) {
-        data = [TFY_EasyUtils convertHexStrToData:@"FA0C00000000000C"];//
+        data = [TFY_EasyUtils convertHexStrToData:@"22HY63475E15"];//
         [self hhhhhhdata:data];
     }
     if (btn.tag==16) {
         [TFY_ProgressHUD showWithStatus:@"提示...."];
         Blue_queueGlobalStart
         
-        [self.bleManager readValueWithPeripheral:self.peripheral serviceUUID:@"0000FC00-0000-1000-8000-00805F9B34FB" readUUID:@"0000FCA1-0000-1000-8000-00805F9B34FB" callback:^(NSData *data, NSError *error) {
+        [self.bleManager readValueWithPeripheral:self.peripheral serviceUUID:UUID_SERVICE readUUID:@"00002902-0000-1000-8000-00805f9b34fb" callback:^(NSData *data, NSError *error) {
             
             Blue_queueMainStart
             if (error!=nil) {
@@ -109,7 +114,7 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
         [TFY_ProgressHUD showWithStatus:@"提示...."];
         Blue_queueGlobalStart
         
-         [self.bleManager notifyDataWithPeripheral:self.peripheral serviceUUID:@"0000FC00-0000-1000-8000-00805F9B34FB" notifyUUID:@"0000FCA1-0000-1000-8000-00805F9B34FB" notifyValue:YES withCallback:^(NSData *data, NSError *error) {
+         [self.bleManager notifyDataWithPeripheral:self.peripheral serviceUUID:UUID_SERVICE notifyUUID:UUID_NOTIFICATION notifyValue:YES withCallback:^(NSData *data, NSError *error) {
              Blue_queueMainStart
              if (error!=nil) {
                  [TFY_ProgressHUD showErrorWithStatus:error.domain duration:5];
@@ -126,7 +131,7 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
         [TFY_ProgressHUD showWithStatus:@"提示...."];
         Blue_queueGlobalStart
         
-         [self.bleManager notifyDataWithPeripheral:self.peripheral serviceUUID:@"0000FC00-0000-1000-8000-00805F9B34FB" notifyUUID:@"0000FCA1-0000-1000-8000-00805F9B34FB" notifyValue:NO withCallback:^(NSData *data, NSError *error) {
+         [self.bleManager notifyDataWithPeripheral:self.peripheral serviceUUID:UUID_SERVICE notifyUUID:UUID_NOTIFICATION notifyValue:NO withCallback:^(NSData *data, NSError *error) {
              Blue_queueMainStart
              if (error!=nil) {
                  [TFY_ProgressHUD showErrorWithStatus:error.domain duration:5];
@@ -145,7 +150,7 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
     [TFY_ProgressHUD showPromptWithStatus:@"写入中..." duration:1.5];
     Blue_queueGlobalStart
     
-    [self.bleManager writeDataWithPeripheral:self.peripheral serviceUUID:@"0000FC00-0000-1000-8000-00805F9B34FB" writeUUID:@"0000FCA0-0000-1000-8000-00805F9B34FB" data:data callback:^(NSData *data, NSError *error) {
+    [self.bleManager writeDataWithPeripheral:self.peripheral serviceUUID:UUID_SERVICE writeUUID:UUID_WRITE data:data callback:^(NSData *data, NSError *error) {
              Blue_queueMainStart
             if (error!=nil) {
                 [TFY_ProgressHUD showErrorWithStatus:error.domain duration:5];

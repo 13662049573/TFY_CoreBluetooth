@@ -18,8 +18,8 @@
     CBManagerState _centerState ;//当前系统蓝牙状态
     
     NSTimeInterval _scanTimeInterval ;      //当前扫描的时间
-    NSArray *_scanServicesArray ;//扫描的条件
-    NSDictionary *_scanOptionsDictionary ;//扫描条件
+    NSArray<CBUUID *> *_scanServicesArray ;//扫描的条件
+    NSDictionary<NSString *, id> *_scanOptionsDictionary ;//扫描条件
     blueToothSearchDeviceCallback _blueToothSearchDeviceCallback ;
     
 }
@@ -62,15 +62,14 @@
 }
 
 - (void)scanDeviceWithTimeInterval:(NSTimeInterval)timeInterval
-                          services:(NSArray *)service
-                           options:(NSDictionary *)options
+                          services:(NSArray<CBUUID *> *)service
+                           options:(NSDictionary<NSString *, id> *)options
                           callBack:(blueToothSearchDeviceCallback)searchDeviceCallBack
 {
     NSAssert(searchDeviceCallBack, @"搜索设备回调为零");
     _scanTimeInterval = timeInterval ;
     _scanOptionsDictionary = options ;
     _scanServicesArray = service ;
-    
     if (searchDeviceCallBack) {
         _blueToothSearchDeviceCallback = [searchDeviceCallBack copy] ;
     }
@@ -393,13 +392,10 @@
 }
 
 
-- (NSArray *)retrieveConnectedPeripheralsWithServices:(NSArray *)serviceUUIDs
+- (NSArray<TFY_EasyPeripheral *> *)retrieveConnectedPeripheralsWithServices:(NSArray<CBUUID *> *)serviceUUIDs
 {
     Blue_EasyLog_R(@"根据服务的id获取所有系统已连接上的设备：%@",serviceUUIDs);
-
-    if (!serviceUUIDs.count) {
-        return @[];
-    }
+    if (!serviceUUIDs.count) {return @[];}
     
     NSArray *resultArray = [self.manager retrieveConnectedPeripheralsWithServices:serviceUUIDs];
     
@@ -411,7 +407,7 @@
     return tempArray ;
 }
 
-- (NSArray *)retrievePeripheralsWithIdentifiers:(NSArray *)identifiers
+- (NSArray<TFY_EasyPeripheral *> *)retrievePeripheralsWithIdentifiers:(NSArray<NSUUID *> *)identifiers
 {
     Blue_EasyLog_R(@"蓝牙获取系统所有已知设备：%@",identifiers);
 
