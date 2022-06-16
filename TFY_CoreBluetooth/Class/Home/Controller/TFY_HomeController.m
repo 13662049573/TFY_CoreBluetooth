@@ -37,7 +37,7 @@ TFY_PROPERTY_NSMutableArray(dataArray);
     // 0000FC00-0000-1000-8000-00805F9B34FB
     CBUUID *dfuServiceUUID = [CBUUID UUIDWithString:@"0000FFF0-0000-1000-8000-00805F9B34FB"];
     TFY_WEAK;
-    [self.centerManager scanDeviceWithTimeInterval:LONG_MAX services:@[dfuServiceUUID] options:@{ CBCentralManagerScanOptionAllowDuplicatesKey: @YES }  callBack:^(TFY_EasyPeripheral *peripheral, searchFlagType searchType) {
+    [self.centerManager scanDeviceWithTimeInterval:LONG_MAX services:@[] options:@{ CBCentralManagerScanOptionAllowDuplicatesKey: @YES }  callBack:^(TFY_EasyPeripheral *peripheral, searchFlagType searchType) {
        
         TFY_BlueModel *model = [[TFY_BlueModel alloc] initWithEasyCenterManager:peripheral];
         

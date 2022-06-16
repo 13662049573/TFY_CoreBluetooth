@@ -347,7 +347,7 @@
 		169E4B077C13FDF4346505647C2EFED7 /* TFY_UIHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFY_UIHeader.h; path = TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Categories/TFY_UI/TFY_UIHeader.h; sourceTree = "<group>"; };
 		16BDEFCA98E78DE2346A9EB360F7164F /* TFY_AutoLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TFY_AutoLayout.release.xcconfig; sourceTree = "<group>"; };
 		17960512446CBA462530FA79D8929029 /* TFY_EmiiterLayerChainModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFY_EmiiterLayerChainModel.m; path = TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Chain/TFY_CALayer/TFY_EmiiterLayerChainModel.m; sourceTree = "<group>"; };
-		1901CDF70D23A68CA0B9E02D2F70C422 /* TFY_AutoLayout */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = TFY_AutoLayout; path = libTFY_AutoLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1901CDF70D23A68CA0B9E02D2F70C422 /* libTFY_AutoLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTFY_AutoLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		196393D50B2A5B027D280B380F987715 /* TFY_TextRenderHerder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFY_TextRenderHerder.h; path = TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Categories/TFY_TextKit/TFY_TextRenderHerder.h; sourceTree = "<group>"; };
 		1A4148972A00FF98D38F6B8954A3CAB0 /* UIAlertController+TFY_Chain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertController+TFY_Chain.m"; path = "TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation/UIAlertController+TFY_Chain.m"; sourceTree = "<group>"; };
 		1B56C9274B95C8BBFB01A2E7212DD812 /* TFY_NavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFY_NavigationController.h; path = TFY_Navigation/TFY_Navigation/TFY_NavControoler/TFY_NavigationController.h; sourceTree = "<group>"; };
@@ -489,7 +489,7 @@
 		9C3C505CD5D4B42B67ACACCDD3C0AE36 /* TFY_TextStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TFY_TextStorage.m; path = TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Categories/TFY_TextKit/TFY_TextStorage.m; sourceTree = "<group>"; };
 		9D2E61C75FDA078CD0D26D32195FD71A /* TFY_Timer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFY_Timer.h; path = TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Tools/TFY_Timer.h; sourceTree = "<group>"; };
 		9D5F3E26123B1AB116CF3A62C6B9C8D8 /* TFY_SegmentedControlChainModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFY_SegmentedControlChainModel.h; path = TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Chain/TFY_UIView/TFY_SegmentedControlChainModel.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EB2ECC16AA95C1DAB7F063E4885CE78 /* TFY_PanGestureChainModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TFY_PanGestureChainModel.h; path = TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Chain/TFY_UIGesture/TFY_PanGestureChainModel.h; sourceTree = "<group>"; };
 		9EE6D529389866422E04C4A1B3582FBD /* TFY_AutoLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TFY_AutoLayout-prefix.pch"; sourceTree = "<group>"; };
 		9EF313FB23D8365F1489B6B9AB1E1C25 /* NSString+TFY_String.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TFY_String.h"; path = "TFY_LayoutCategoryUtil/TFY_LayoutCategoryKit/TFY_Categories/TFY_Foundation/NSString+TFY_String.h"; sourceTree = "<group>"; };
@@ -837,7 +837,6 @@
 				515D9099572D6D0B1B9BFBD952588D85 /* Support Files */,
 				A589C4551DD0679BCA3F9F404B4B568B /* TFY_NavControoler */,
 			);
-			name = TFY_Navigation;
 			path = TFY_Navigation;
 			sourceTree = "<group>";
 		};
@@ -901,7 +900,6 @@
 				AAE3FD1C73531FA46FD32C5FEECA5B13 /* Support Files */,
 				DB3E9C81483A2DEB30559C089FA384DD /* TFY_SystemTabBar */,
 			);
-			name = TFY_TabBarKit;
 			path = TFY_TabBarKit;
 			sourceTree = "<group>";
 		};
@@ -1088,7 +1086,7 @@
 			isa = PBXGroup;
 			children = (
 				4B08C66A98A627CC5FA56853AB6350EE /* Pods-TFY_CoreBluetooth */,
-				1901CDF70D23A68CA0B9E02D2F70C422 /* TFY_AutoLayout */,
+				1901CDF70D23A68CA0B9E02D2F70C422 /* libTFY_AutoLayout.a */,
 				1FF45DA6BD3263474314B951A5B7F5D3 /* TFY_LayoutCategoryKit */,
 				B6A6A5366FA68A592078186176C339F1 /* TFY_Navigation */,
 				48C96B5059656AEE8F1A8ED041C4BF1C /* TFY_ProgressHUD */,
@@ -1108,7 +1106,6 @@
 				8BC24E9C0D18B0A0CF01E87153EF261C /* Resources */,
 				9CB1D2EFAC7B41C7EC4CF88E1DFD0391 /* Support Files */,
 			);
-			name = TFY_ProgressHUD;
 			path = TFY_ProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1132,7 +1129,6 @@
 				27F54DEEE5C7214C89E6C3C128B35921 /* TFY_Chain */,
 				321EE46CDD6D7CD67C03431FF2AB1131 /* TFY_Tools */,
 			);
-			name = TFY_LayoutCategoryKit;
 			path = TFY_LayoutCategoryKit;
 			sourceTree = "<group>";
 		};
@@ -1182,7 +1178,6 @@
 				03E71228960B984A263CB4F5E7881905 /* Support Files */,
 				2AD0C8264F8419C0985AD758D572DCC3 /* Util */,
 			);
-			name = TFY_AutoLayout;
 			path = TFY_AutoLayout;
 			sourceTree = "<group>";
 		};
@@ -1510,7 +1505,7 @@
 			);
 			name = TFY_AutoLayout;
 			productName = TFY_AutoLayout;
-			productReference = 1901CDF70D23A68CA0B9E02D2F70C422 /* TFY_AutoLayout */;
+			productReference = 1901CDF70D23A68CA0B9E02D2F70C422 /* libTFY_AutoLayout.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		CF4BE1EA65FAC8EB9A14C1A8E42D5475 /* TFY_ProgressHUD */ = {
@@ -1554,7 +1549,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1340;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -1884,7 +1879,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TFY_AutoLayout/TFY_AutoLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -2062,7 +2057,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/TFY_AutoLayout/TFY_AutoLayout-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";

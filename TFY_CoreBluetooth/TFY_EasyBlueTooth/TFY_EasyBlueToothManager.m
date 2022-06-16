@@ -893,15 +893,6 @@ typedef void (^blueToothFindCharacteristic)(TFY_EasyCharacteristic *character ,N
         }
     }];
 }
-- (void)connectDeviceWithIdentifier:(NSString *)identifier
-                        serviceUUID:(NSString *)serviceUUID
-                         notifyUUID:(NSString *)notifyUUID
-                          wirteUUID:(NSString *)writeUUID
-                          writeData:(NSData *)data
-                           callback:(blueToothOperationCallback)callback
-{
-    
-}
 
 #pragma mark - getter
 

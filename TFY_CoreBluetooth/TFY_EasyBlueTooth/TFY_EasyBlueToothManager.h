@@ -294,12 +294,7 @@ typedef void (^blueToothOperationCallback)(NSData *data , NSError *error);
                     writeData:(NSData *)data
                      callback:(blueToothOperationCallback)callback ;
 
-- (void)connectDeviceWithIdentifier:(NSString *)identifier
-                        serviceUUID:(NSString *)serviceUUID
-                         notifyUUID:(NSString *)notifyUUID
-                          wirteUUID:(NSString *)writeUUID
-                          writeData:(NSData *)data
-                           callback:(blueToothOperationCallback)callback ;
+
 
 @end
 

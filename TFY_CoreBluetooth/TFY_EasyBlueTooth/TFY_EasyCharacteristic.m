@@ -112,6 +112,7 @@
     NSData *data = [[NSData alloc]initWithBytes:&byte length:1];
     [self writeValueWithData:data callback:callback];
 }
+
 - (void)writeValueWithData:(NSData *)data callback:(blueToothCharactersticOperateCallback)callback
 {
     NSAssert(data, @"byte为null，您不能将空数据发送到设备");
@@ -125,7 +126,7 @@
     }
     
     CBCharacteristicWriteType writeType = callback ? CBCharacteristicWriteWithResponse : CBCharacteristicWriteWithoutResponse ;
-    
+    NSLog(@"data.length====%ld",data.length);
     for (int i = 0; i < data.length; i+=20) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
