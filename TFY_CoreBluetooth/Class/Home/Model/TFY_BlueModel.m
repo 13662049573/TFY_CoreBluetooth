@@ -19,16 +19,17 @@
 -(instancetype)initWithEasyCenterManager:(TFY_EasyPeripheral *)peripheral{
     
     if (self=[super init]) {
-        
+        // 000066229d5613a2
         self.RSSI = peripheral.RSSI;
         self.name = peripheral.name;
         self.identifierString = peripheral.identifierString;
         NSData *data = peripheral.advertisementData[@"kCBAdvDataManufacturerData"];
         NSString *mac = [TFY_EasyUtils convertDataToHexStr:data];
-    
-        NSMutableDictionary *dict = [self buledata:[self reversalString:mac]];
-        
-        self.macip = [NSString stringWithFormat:@"%@",dict[@"macip"]];
+        if (mac != nil) {
+            NSMutableDictionary *dict = [self buledata:mac];
+            
+            self.macip = [NSString stringWithFormat:@"%@",dict[@"macip"]];
+        }
     }
     return self;
 }
@@ -59,8 +60,8 @@
 -(NSMutableDictionary *)buledata:(NSString *)data{
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    if (data.length==16) {
-        NSString *types = [data substringWithRange:NSMakeRange(0, 12)].uppercaseString;
+    if (data.length > 15) {
+        NSString *types = [data substringWithRange:NSMakeRange(4, 12)].uppercaseString;
         NSMutableString *sting = [[NSMutableString alloc] initWithString:types];
         for (NSInteger i=0; i<sting.length; i++) {
             if (i==1 || i== 3 || i==5 || i==7 || i==9) {

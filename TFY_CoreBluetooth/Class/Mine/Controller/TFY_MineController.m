@@ -98,8 +98,8 @@ TFY_PROPERTY_OBJECT_STRONG(UITableView, tableView);
         NSDictionary *connectDict = @{CBConnectPeripheralOptionNotifyOnConnectionKey:@YES,CBConnectPeripheralOptionNotifyOnDisconnectionKey:@YES,CBConnectPeripheralOptionNotifyOnNotificationKey:@YES};
         
         TFY_EasyManagerOptions *options = [[TFY_EasyManagerOptions alloc]initWithManagerQueue:queue managerDictionary:managerDict scanOptions:scanDict scanServiceArray:@[] connectOptions:connectDict];
-        options.scanTimeOut = 6 ;
-        options.connectTimeOut = 5 ;
+        options.scanTimeOut = 20 ;
+        options.connectTimeOut = 20 ;
         options.autoConnectAfterDisconnect = YES ;
         
         [TFY_EasyBlueToothManager shareInstance].managerOptions = options ;

@@ -42,7 +42,7 @@ static NSString *const savedUUID = @"0000FC00-0000-1000-8000-00805F9B34FB" ;
         [weakSelf connectDevices];
     } else {
         [TFY_ProgressHUD showPromptWithStatus:@"寻找设备中..."];
-        [self.bleManager scanAllDeviceWithName:@"HS_BLE" callback:^(NSArray<TFY_EasyPeripheral *> *deviceArray, NSError *error) {
+        [self.bleManager scanAllDeviceWithName:@"BLE-GUC2" callback:^(NSArray<TFY_EasyPeripheral *> *deviceArray, NSError *error) {
           
             Blue_queueMainStart
             [TFY_ProgressHUD dismiss];

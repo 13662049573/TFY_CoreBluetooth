@@ -42,7 +42,7 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
     };
     [TFY_ProgressHUD showWithStatus:@"正在扫描并连接设别..."];
     TFY_WEAK;
-    [self.bleManager scanAndConnectDeviceWithName:@"HS_BLE" callback:^(TFY_EasyPeripheral *peripheral, NSError *error) {
+    [self.bleManager scanAndConnectDeviceWithName:@"BLE-GUC2" callback:^(TFY_EasyPeripheral *peripheral, NSError *error) {
         if (!error) {
             weakSelf.peripheral = peripheral ;
             
