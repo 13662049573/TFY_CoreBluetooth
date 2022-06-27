@@ -14,12 +14,13 @@
 TFY_PROPERTY_OBJECT_STRONG(UITableView, tableView);
 TFY_PROPERTY_NSMutableArray(dataArray);
 TFY_PROPERTY_OBJECT_STRONG(UITextField, currentField);
+@property (nonatomic , strong) TFY_EasyCharacteristic *characteristic2;
 @end
 
 @implementation TFY_DetailOperationController
 
 - (void)dealloc {
-    [self.characteristic removeObserver:self forKeyPath:@"notifyDataArray"];
+    [self.characteristic2 removeObserver:self forKeyPath:@"notifyDataArray"];
 }
 
 - (void)viewDidLoad {
@@ -28,12 +29,17 @@ TFY_PROPERTY_OBJECT_STRONG(UITextField, currentField);
     [self.view addSubview:self.tableView];
     [self.tableView tfy_AutoSize:0 top:0 right:0 bottom:0];
     
-    NSArray *array  = [self.characteristic.propertiesString componentsSeparatedByString:@" "];
+    NSArray *array  = [self.characteristic2.propertiesString componentsSeparatedByString:@" "];
     self.dataArray = [NSMutableArray arrayWithArray:array];
     
     [self.tableView reloadData];
     
-    [self.characteristic addObserver:self forKeyPath:@"notifyDataArray" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.characteristic2 addObserver:self forKeyPath:@"notifyDataArray" options:NSKeyValueObservingOptionNew context:NULL];
+}
+
+- (void)setCharacteristic:(TFY_EasyCharacteristic *)characteristic {
+    _characteristic = characteristic;
+    self.characteristic2 = characteristic;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -52,20 +58,20 @@ TFY_PROPERTY_OBJECT_STRONG(UITextField, currentField);
     if (section < self.dataArray.count ) {
         NSString *tempString = self.dataArray[section];
         if ([tempString isEqualToString:@"Write"]||[tempString isEqualToString:@"WithoutResponse"]) {
-            return self.characteristic.writeDataArray.count + 1 ;
+            return self.characteristic2.writeDataArray.count + 1 ;
         }
         else if ([tempString isEqualToString:@"Read"]){
-            return self.characteristic.readDataArray.count + 1;
+            return self.characteristic2.readDataArray.count + 1;
         }
         else if ([tempString isEqualToString:@"Notify"]||[tempString isEqualToString:@"Indicate"]){
-            return self.characteristic.notifyDataArray.count + 1 ;
+            return self.characteristic2.notifyDataArray.count + 1 ;
         }
         else{
             return 0 ;
         }
     }
     else if(section == self.dataArray.count){
-        return self.characteristic.descriptorArray.count ;
+        return self.characteristic2.descriptorArray.count ;
     }
     else{
         return self.dataArray.count ;
@@ -87,24 +93,24 @@ TFY_PROPERTY_OBJECT_STRONG(UITextField, currentField);
         if (indexPath.row == 0) {
             cell.title = [NSString stringWithFormat:@"%@ 新的价值",tempString] ;
             if ([tempString isEqualToString:@"Notify"]) {
-                cell.title = [NSString stringWithFormat:@"%@",self.characteristic.isNotifying?@"停止通知 ":@"点击开始通知"];
+                cell.title = [NSString stringWithFormat:@"%@",self.characteristic2.isNotifying?@"停止通知 ":@"点击开始通知"];
             }
         }else{
             if ([tempString isEqualToString:@"Write"] ||[tempString isEqualToString:@"WithoutResponse"]) {
-                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic.writeDataArray[indexPath.row-1]];
+                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic2.writeDataArray[indexPath.row-1]];
             }
             else if ([tempString isEqualToString:@"Read"]){
-                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic.readDataArray[indexPath.row-1]];
+                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic2.readDataArray[indexPath.row-1]];
             }
             else if ([tempString isEqualToString:@"Notify"]||[tempString isEqualToString:@"Indicate"]){
-                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic.notifyDataArray[indexPath.row-1]];
+                cell.title = [TFY_EasyUtils convertDataToHexStr:self.characteristic2.notifyDataArray[indexPath.row-1]];
             }
             
         }
         
     }
     else if (indexPath.section == self.dataArray.count){
-        TFY_EasyDescriptor *tempD = self.characteristic.descriptorArray[indexPath.row];
+        TFY_EasyDescriptor *tempD = self.characteristic2.descriptorArray[indexPath.row];
         cell.title = [NSString stringWithFormat:@"%@",tempD.UUID];
     }
     else{
@@ -134,25 +140,27 @@ TFY_PROPERTY_OBJECT_STRONG(UITextField, currentField);
                         return;
                     }
                     NSData *data = [TFY_EasyUtils convertHexStrToData:self.currentField.text];
-                     [self.characteristic writeValueWithData:data callback:^(TFY_EasyCharacteristic *characteristic, NSData *data, NSError *error) {
-                         TFY_WEAK;
-                         Blue_queueMainStart
-                          if (error!=nil) {
-                              [TFY_ProgressHUD showErrorWithStatus:error.domain duration:5];
-                          }
-                          else{
-                              NSString *string = [TFY_EasyUtils convertDataToHexStr:data];
-                              [TFY_ProgressHUD showPromptWithStatus:string duration:5];
-                          }
-                         [weakSelf.tableView reloadData];
-                         Blue_queueEnd
-                     }];
+                    if (data != nil) {
+                        [self.characteristic2 writeValueWithData:data callback:^(TFY_EasyCharacteristic *characteristic, NSData *data, NSError *error) {
+                            TFY_WEAK;
+                            Blue_queueMainStart
+                             if (error!=nil) {
+                                 [TFY_ProgressHUD showErrorWithStatus:error.domain duration:5];
+                             }
+                             else{
+                                 NSString *string = [TFY_EasyUtils convertDataToHexStr:data];
+                                 [TFY_ProgressHUD showPromptWithStatus:string duration:5];
+                             }
+                            [weakSelf.tableView reloadData];
+                            Blue_queueEnd
+                        }];
+                    }
                 }
             })
             .tfy_showFromViewController(self);
         }
         else if ([tempString isEqualToString:@"Read"]){
-            [self.characteristic readValueWithCallback:^(TFY_EasyCharacteristic *characteristic, NSData *data, NSError *error) {
+            [self.characteristic2 readValueWithCallback:^(TFY_EasyCharacteristic *characteristic, NSData *data, NSError *error) {
                 TFY_WEAK;
                 Blue_queueMainStart
                  if (error!=nil) {
@@ -168,7 +176,7 @@ TFY_PROPERTY_OBJECT_STRONG(UITextField, currentField);
             }];
         }
         else if ([tempString isEqualToString:@"Notify"]||[tempString isEqualToString:@"Indicate"]){
-            [self.characteristic notifyWithValue:!self.characteristic.isNotifying callback:^(TFY_EasyCharacteristic *characteristic, NSData *data, NSError *error) {
+            [self.characteristic2 notifyWithValue:!self.characteristic2.isNotifying callback:^(TFY_EasyCharacteristic *characteristic, NSData *data, NSError *error) {
                 TFY_WEAK;
                 Blue_queueMainStart
                 if (error!=nil) {

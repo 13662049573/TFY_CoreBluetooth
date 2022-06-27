@@ -34,10 +34,10 @@ TFY_PROPERTY_NSMutableArray(dataArray);
     self.title = @"蓝牙列表";
     [self.view addSubview:self.tableView];
     [self.tableView tfy_AutoSize:0 top:0 right:0 bottom:0];
-    // 0000FC00-0000-1000-8000-00805F9B34FB
-    CBUUID *dfuServiceUUID = [CBUUID UUIDWithString:@"0000FFF0-0000-1000-8000-00805F9B34FB"];
+    // 0000FC00-0000-1000-8000-00805F9B34FB /// 18F0E7810A71-73AE-499D-8C15-FAA9AEF0C3F2
+    CBUUID *dfuServiceUUID = [CBUUID UUIDWithString:@"E7810A71-73AE-499D-8C15-FAA9AEF0C3F2"];
     TFY_WEAK;
-    [self.centerManager scanDeviceWithTimeInterval:20 services:@[] options:@{ CBCentralManagerScanOptionAllowDuplicatesKey: @YES }  callBack:^(TFY_EasyPeripheral *peripheral, searchFlagType searchType) {
+    [self.centerManager scanDeviceWithTimeInterval:20 services:@[dfuServiceUUID] options:@{ CBCentralManagerScanOptionAllowDuplicatesKey: @YES }  callBack:^(TFY_EasyPeripheral *peripheral, searchFlagType searchType) {
        
         TFY_BlueModel *model = [[TFY_BlueModel alloc] initWithEasyCenterManager:peripheral];
         
@@ -45,8 +45,8 @@ TFY_PROPERTY_NSMutableArray(dataArray);
             NSLog(@"==================================%@-------macip===:%@",model.name,model.macip);
         }
         
-        if (peripheral) {
-             if(searchType&searchFlagTypeAdded){
+        if (peripheral && ![peripheral.name isEqualToString:@"无名称"]) {
+            if(searchType&searchFlagTypeAdded){
                 [weakSelf.dataArray addObject:peripheral];
             }
             else if (searchType&searchFlagTypeDisconnect || searchType&searchFlagTypeDelete){

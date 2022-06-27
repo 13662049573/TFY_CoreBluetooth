@@ -9,9 +9,9 @@
 #import "TFY_ExampleScanNameController.h"
 
 #define UUID_SERVICE @"0000FFF0-0000-1000-8000-00805F9B34FB"
-#define UUID_WRITE @"0000FFF1-0000-1000-8000-00805F9B34FB"
-#define UUID_NOTIFICATION @"0000FFF1-0000-1000-8000-00805F9B34FB"
-#define CCCD_READ @"00002902-0000-1000-8000-00805f9b34fb"
+#define UUID_WRITE @"bef8d6c9-9c21-4c9e-b632-bd58c1009f9f"
+#define UUID_NOTIFICATION @"00002af0-0000-1000-8000-00805f9b34fb"
+#define CCCD_READ @"bef8d6c9-9c21-4c9e-b632-bd58c1009f9f"
 
 @interface TFY_ExampleScanNameController ()
 TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
@@ -40,14 +40,15 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
         }
         Blue_queueEnd
     };
+    
     [TFY_ProgressHUD showWithStatus:@"正在扫描并连接设别..."];
     TFY_WEAK;
-    [self.bleManager scanAndConnectDeviceWithName:@"BLE-GUC2" callback:^(TFY_EasyPeripheral *peripheral, NSError *error) {
+    [self.bleManager scanAndConnectDeviceWithName:@"66:22:9D:56:13:A2" callback:^(TFY_EasyPeripheral *peripheral, NSError *error) {
         if (!error) {
             weakSelf.peripheral = peripheral ;
-            
+
             TFY_BlueModel *model = [[TFY_BlueModel alloc] initWithEasyCenterManager:peripheral];
-            
+
             NSLog(@"identifierString------%@============%@",model.macip,model.identifierString);
         }
     }];
@@ -67,7 +68,7 @@ TFY_PROPERTY_OBJECT_STRONG(TFY_EasyPeripheral, peripheral);
 {
     NSData *data;
     if (btn.tag==10) {
-           data = [TFY_EasyUtils convertHexStrToData:@"22HY63475E15"];//FA 03 12 04 0E 08 00 2F
+        data = [TFY_EasyUtils convertHexStrToData:@"2A01080007E6061B0B1E16F623"];
         [self hhhhhhdata:data];
     }
     if (btn.tag==11) {

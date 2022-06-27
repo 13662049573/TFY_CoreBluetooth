@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2A33E648-091E-4F22-9FC3-48DC8D64129B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_EasyBlueToothManager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "753"
-            endingLineNumber = "753"
-            landmarkName = "-searchCharacteristicWithPeripheral:serviceUUID:operationUUID:callback:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9042AA0B-3DC4-4172-AF19-772BE05769F0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -87,16 +71,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "53A7F7EA-02F8-43D3-B31C-684B49B849EF"
+            uuid = "072C97DD-F393-4FFE-B97D-DA3E396B98B1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TFY_CoreBluetooth/TFY_EasyBlueTooth/TFY_EasyCharacteristic.m"
+            filePath = "TFY_CoreBluetooth/Class/Mine/Controller/TFY_ExampleScanNameController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-writeValueWithData:callback:"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "-sendOrder:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DAD1259-D4CD-49FC-8718-7D18912859AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TFY_CoreBluetooth/Class/Home/Controller/TFY_DetailOperationController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
