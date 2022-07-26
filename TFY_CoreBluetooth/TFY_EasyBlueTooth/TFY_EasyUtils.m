@@ -542,4 +542,108 @@ static const double reserved_float_values[5] = {INFINITY, NAN, NAN, NAN, -INFINI
     }
     return decimal;
 }
+
+/**
+异或计算（XOR）
+sourceData 第一个
+ keyData 第二二
+*/
++ (NSData *)encodeXorData:(NSData *)sourceData withKey:(NSData *)keyData {
+   Byte *keyBytes = (Byte *)[keyData bytes]; //取关键字的Byte数组, keyBytes一直指向头部
+   Byte *sourceDataPoint = (Byte *)[sourceData bytes]; //取需要加密的数据的Byte数组
+   for (long i = 0; i < [sourceData length]; i++) {
+       sourceDataPoint[i] = sourceDataPoint[i] ^ keyBytes[i]; //然后按位进行异或运算
+   }
+   return sourceData;
+}
+
++ (NSString *)stringXOR:(NSString *)string {
+    if (string.length%2) {
+        string = [NSString stringWithFormat:@"0%@", string];
+    }
+    NSString *code = @"00";
+    for (int i=0; i<string.length; i=i+2) {
+        // 两位两位取出
+        NSString *subString = [string substringWithRange:NSMakeRange(i, 2)];
+        // subString转为16进制
+        NSString *hexString = [self getHexByDecimal:[subString integerValue]];
+        code = [self pinxCreator:code withPinv:hexString];
+    }
+    return code;
+}
+
++ (NSString *)pinxCreator:(NSString *)pan withPinv:(NSString *)pinv {
+    if (pan.length != pinv.length) {
+        return nil;
+    }
+    const char *panchar = [pan UTF8String];
+    const char *pinvchar = [pinv UTF8String];
+    NSString *temp = [[NSString alloc] init];
+    for (int i = 0; i < pan.length; i++) {
+        int panValue = [self charToint:panchar[i]];
+        int pinvValue = [self charToint:pinvchar[i]];
+        temp = [temp stringByAppendingString:[NSString stringWithFormat:@"%X",panValue^pinvValue]];
+    }
+    return temp;
+}
+
++ (int)charToint:(char)tempChar {
+    if (tempChar >= '0' && tempChar <='9') {
+        return tempChar - '0';
+    } else if (tempChar >= 'A' && tempChar <= 'F') {
+        return tempChar - 'A' + 10;
+    } else if (tempChar >= 'a' && tempChar <= 'f') {
+        return tempChar - 'a' + 10;
+    }
+    return 0;
+}
+
+@end
+
+
+@implementation NSData (bule)
+
+/**
+ contentData 需要校验的内容
+ 异或值
+ */
+- (int)contentCheckValue:(NSData *)contentData {
+    Byte *testByte = (Byte *)[contentData bytes];
+    int checksum = 0;
+    for(int i=0; i<[contentData length]; i++) {
+        checksum ^= testByte[i];
+    }
+    return checksum;
+}
+
+/**
+ 与一个固定的值异或异或后的值
+ */
+- (NSData *)xor_0X5A {
+    NSMutableData *data = [NSMutableData dataWithLength:1];
+    uint8_t num = 0x5A;
+    [data replaceBytesInRange:NSMakeRange(0, 1) withBytes:&num];
+    Byte *byte1 = (Byte *)[self.copy bytes];
+    Byte *byte2 = (Byte *)[data bytes];
+    for(int i = 0; i < self.length; i++) {
+        byte1[i] ^= byte2[0];
+    }
+    NSData *data1 = [[NSData alloc] initWithBytes:byte1 length:self.length];
+    return data1;
+}
+
+
+/**
+ 异或校验（每一字节分别异或）n 校验值
+ */
+- (int)contentCheckValue {
+    Byte *testByte = (Byte *)[self bytes];
+    int checksum = 0;
+    for(int i=0; i<[self length]; i++) {
+        checksum ^= testByte[i];
+    }
+    return checksum;
+}
+
+
 @end

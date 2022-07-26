@@ -189,6 +189,39 @@ typedef union
  * 二进制转换为十进制
  */
 + (NSInteger)getDecimalByBinary:(NSString *)binary;
+/**
+异或计算（XOR）
+sourceData 第一个
+ keyData 第二二
+*/
++ (NSData *)encodeXorData:(NSData *)sourceData withKey:(NSData *)keyData;
+
+/**
+ * 计算异或值
+ * string 需要异或的字符串
+ * 获取异或后的字符串
+ */
++ (NSString *)stringXOR:(NSString *)string;
+
+@end
+
+@interface NSData (bule)
+/**
+ contentData 需要校验的内容
+ 异或值
+ */
+- (int)contentCheckValue:(NSData *)contentData;
+
+/**
+ 与一个固定的值异或异或后的值
+ */
+- (NSData *)xor_0X5A;
+
+/**
+ 异或校验（每一字节分别异或）n 校验值
+ */
+- (int)contentCheckValue;
+
 @end
 
 NS_ASSUME_NONNULL_END

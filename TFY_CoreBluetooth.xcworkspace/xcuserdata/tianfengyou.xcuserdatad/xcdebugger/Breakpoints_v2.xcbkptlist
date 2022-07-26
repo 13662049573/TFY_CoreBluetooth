@@ -34,6 +34,38 @@
             endingLineNumber = "123"
             landmarkName = "-hhhhhhdata:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D88F8F1B-284E-4CA0-B301-2C1AE93A72AC - 74373a6ac1223782"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[TFY_ExampleSavedController hhhhhhdata:]_block_invoke_2"
+                  moduleName = "&#x84dd;&#x7259;&#x5904;&#x7406;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianfengyou/Documents/GitHub/TFY_CoreBluetooth/TFY_CoreBluetooth/Class/Mine/Controller/TFY_ExampleSavedController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "D88F8F1B-284E-4CA0-B301-2C1AE93A72AC - 74373a6ad12237a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__41-[TFY_ExampleSavedController hhhhhhdata:]_block_invoke_3"
+                  moduleName = "&#x84dd;&#x7259;&#x5904;&#x7406;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tianfengyou/Documents/GitHub/TFY_CoreBluetooth/TFY_CoreBluetooth/Class/Mine/Controller/TFY_ExampleSavedController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,22 +113,6 @@
             startingLineNumber = "137"
             endingLineNumber = "137"
             landmarkName = "-sendOrder:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2DAD1259-D4CD-49FC-8718-7D18912859AC"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TFY_CoreBluetooth/Class/Home/Controller/TFY_DetailOperationController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-dealloc"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
